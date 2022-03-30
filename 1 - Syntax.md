@@ -212,6 +212,9 @@ var variable :array = [
 
 ### Aplicações específicas de variáveis e valores relacionados
 ```javascript
+// Operações como valores.
+var variable = (10 + (variable++) + (3.14 * 3) / --abc);
+
 // Operações dentro de elementos de array.
 var variable = [
     1, 2, 3,
