@@ -188,8 +188,7 @@ var variable :array = {
 };
 
 var variable = {
-    value: 1.337 <:double> // Neste caso, quando necessário especificar o tipo
-                           // usa-se as setas laterais de abetura e fechamento.
+    value: 1.337 :double
 };
 
 // Exemplo de acessos em arrays associativos.
