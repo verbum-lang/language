@@ -126,7 +126,6 @@ var variable :float     = 0.1337;
 var variable :double    = 3.1337;
 var variable :bool      = true;
 var variable :char      = '♥';
-var variable :str       = 'Verbum 😍';
 var variable :string    = 'Verbum 😍';
 var variavle :stream    = file.open('archive.bin');
 
@@ -199,7 +198,7 @@ variable.items[2].values[3].name    // Member
 variable.items[3]                   // 31337
 
 // Outros exemplos.
-var variable : array = [
+var variable :array = [
     { name: "Verbum" },
     10, 20, 30,
     {
@@ -348,7 +347,7 @@ interface FirstTemplate {
 
 // Interface com herança.
 interface ExampleTemplate extends FirstTemplate {
-    pub fn checkString (string :str);
+    pub fn checkString (string :string);
 }
 
 // Classe abstrata.
@@ -359,7 +358,7 @@ abstract AbstrationCommon {
 // Classe.
 class Common extends AbstractClass {
     // ...
-    pub fn checkString (string :str) -> int { /* ... */ }
+    pub fn checkString (string :string) -> int { /* ... */ }
 
     // Implementa método abstrato.
     pro fn abstractMethod (){
@@ -381,11 +380,11 @@ final class Example extends Common implements ExampleTemplate {
 
     // Atributos.
     priv var attributeA :uint = 31337;
-    pub var attributeB :str  = "Verbum 😃";
-    pub static var subVersion :str = "1337";
+    pub var attributeB :string  = "Verbum 😃";
+    pub static var subVersion :string = "1337";
 
     // Construtor.
-    Example (a: uint, b :str) {
+    Example (a: uint, b :string) {
         this.attributeA = a;
         this.attributeB = b;
     }
@@ -482,7 +481,7 @@ obj.foo(10).show().bar(20).show();
 
 ```php
 obj.setLogger(new class {
-    pub fn log (msg :str) {
+    pub fn log (msg :string) {
         print("{}\n", msg);
     }
 });
@@ -504,7 +503,7 @@ var objB :ClassName = clone(objA);
 destroy(objA);
 
 // Serialization.
-var stringObject :str = serialize(objA);
+var stringObject :string = serialize(objA);
 var objN :ClassName = unserialize(stringObject);
 ```
 
