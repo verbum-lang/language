@@ -212,12 +212,12 @@ var variable :array = [
 
 ### Aplicações específicas de variáveis e valores diferentes
 ```javascript
-// Como valor em variável.
+// Função anônima como valor em variável.
 var variable = (fn (a :int) -> int {
     ret a + 10;
 });
 
-// Com array indexado.
+// Função anônima com array indexado.
 var variable = [
     31337,
     (fn (a :int, b :int) -> int {
@@ -227,7 +227,7 @@ var variable = [
 
 var value = variable[1](10, 20);
 
-// Com array associativo.
+// Função anônima com array associativo.
 var variable = {
     identifier : 'onclick',
     callback   : (fn (a :int, b :int) -> int {
