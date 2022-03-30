@@ -210,43 +210,51 @@ var variable :array = [
 ```
 
 
-### Aplicações específicas de arrays
-
+### Aplicações específicas de variáveis e valores diferentes
 ```javascript
-/* Função como elemento de um array. */
+// Como valor em variável.
+var variable = (fn (a :int) -> int {
+    ret a + 10;
+});
 
-// Com arrays indexados.
+// Com array indexado.
 var variable = [
     31337,
-    fn (a :int, b :int) -> int {
+    (fn (a :int, b :int) -> int {
         ret a + b;   
-    }
+    })
 ];
 
 var value = variable[1](10, 20);
 
-// Com arrays associativos.
+// Com array associativo.
 var variable = {
     identifier : 'onclick',
-    callback   : fn (a :int, b :int) -> int {
+    callback   : (fn (a :int, b :int) -> int {
         ret a + b;   
-    }
+    })
 };
 
 var value = variable.callback(10, 20);
 
-// Com funções anônimas.
-var variable = [
-    10, 20, 30,
+// Tipos de valores recebidos em variáveis.
+var variable = true;
+var variable = 'a';
+var variable = 'string 1';
+var variable = "string 2";
+var variable = 123;
+var variable = 3.14;
+var variable = 0.12345;
+var variable = [ 1, 2, 3 ];
+var variable = { values: [ 1, 2, 3 ] };
+var variable = anotherVariable;
+var variable = functionName(10, 20, 30);
+var variable = obj::functionName(10, 20, 30);
+var variable = obj.functionName(10, 20, 30);
 
-    (fn (value :int) -> int { 
-        ret value * 3; 
-    }),
-
-    40, 50, 60
-];
-
-var value = variable[3](10); // Retorna 30.
+var variable = (10 + 20);
+var variable = (variable * 10 + 20 / 30);
+var variable = ;
 ```
 
 
