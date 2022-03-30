@@ -210,8 +210,17 @@ var variable :array = [
 ```
 
 
-### Aplicações específicas de variáveis e valores diferentes
+### Aplicações específicas de variáveis e valores relacionados
 ```javascript
+// Operações dentro de elementos de array.
+var variable = [
+    1, 2, 3,
+    (10 + 20),
+    'str 1', "str 2"
+];
+
+variable[3]     // Contêm valor 30.
+
 // Função anônima como valor em variável.
 var variable = (fn (a :int) -> int {
     ret a + 10;
@@ -248,13 +257,13 @@ var variable = 0.12345;
 var variable = [ 1, 2, 3 ];
 var variable = { values: [ 1, 2, 3 ] };
 var variable = anotherVariable;
+
 var variable = functionName(10, 20, 30);
 var variable = obj::functionName(10, 20, 30);
 var variable = obj.functionName(10, 20, 30);
 
 var variable = (10 + 20);
 var variable = (variable * 10 + 20 / 30);
-var variable = ;
 ```
 
 
