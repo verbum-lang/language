@@ -232,7 +232,6 @@ var variable :array = [
     }
 ];
 
-// Operações dentro de elementos de array.
 var variable = [
     1, 2, 3,
     (10 + 20),
