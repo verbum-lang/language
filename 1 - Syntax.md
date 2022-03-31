@@ -220,7 +220,7 @@ var variable = (10 + (variable++) + (3.14 * 3) / --abc);
 
 var variable = [
     1, 2, 3,
-    10 + ( 20 * 3 ) / 4,
+    (10 + ( 20 * 3 ) / 4),
     'str 1', "str 2"
 ];
 
@@ -228,7 +228,7 @@ var variable :array = [
     { name:  "Verbum" },
     {
         value: 'Divino',
-        operation:  3 + ( 3 ) + 3    
+        operation:  (3 + ( 3 ) + 3)
     }
 ];
 
