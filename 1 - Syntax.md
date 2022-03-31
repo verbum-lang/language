@@ -220,7 +220,7 @@ var variable = (10 + (variable++) + (3.14 * 3) / --abc);
 
 var variable = [
     1, 2, 3,
-    (10 + 20),
+    10 + ( 20 * 3 ) / 4,
     'str 1', "str 2"
 ];
 
