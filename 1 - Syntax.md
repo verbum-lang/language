@@ -123,8 +123,10 @@ use 'path2/*', 'mysql:*', 'json:unicode';
 // Os caracteres e strings são UNICODE.
 // É aceito aspas simples ou duplas para as strings e caracteres.
 var variable :int       = 31337;
+var variable :int       = -1337;
 var variable :float     = 0.1337;
 var variable :double    = 3.1337;
+var variable :double    = -1.337;
 var variable :bool      = true;
 var variable :char      = '♥';
 var variable :string    = 'Verbum 😍';
