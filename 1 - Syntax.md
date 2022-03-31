@@ -77,6 +77,7 @@ if, elif, else                      Condicionais
 for, break, next                    Loops
 fn                                  Funções
 ret                                 Retorno usado em funções e métodos
+null                                Valor nulo
 
 interface                           Definição de interface
 abstract                            Definição de abstração
