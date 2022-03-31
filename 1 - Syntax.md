@@ -213,6 +213,9 @@ var variable :array = [
 ### Aplicações específicas de variáveis e valores relacionados
 ```javascript
 // Operações como valores.
+// Obs: caso não seja especificado tipo na variável, em operações aritméticas
+// o valor final é automaticamente convertido para inteiro. Caso queira converter
+// o valor final para outro, é obrigatório especificar o tipo da variável, ex.: :float
 var variable = (10 + (variable++) + (3.14 * 3) / --abc);
 
 // Operações dentro de elementos de array.
