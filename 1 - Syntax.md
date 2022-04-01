@@ -423,7 +423,7 @@ final class Example extends Common implements ExampleTemplate {
     pub static var subVersion :string = "1337";
 
     // Construtor.
-    Example (a: uint, b :string) {
+    Example (a :uint, b :string) {
         this.attributeA = a;
         this.attributeB = b;
     }
