@@ -328,15 +328,15 @@ for ()
 ### Funções
 ```rust
 // Uso comum.
-fn example (a: int, b: int) -> int {
+fn example (a:int, b:int) -> int {
     ret (a * b) + 31337;
 }
 
 // Concatenação de funções.
-fn primary (a: int, b: int) -> int {
+fn primary (a:int, b:int) -> int {
     var value = 31337;
 
-    fn secondary (a: int, b: int) -> int {
+    fn secondary (a:int, b:int) -> int {
         ret (a * b) + value;
     }
 
