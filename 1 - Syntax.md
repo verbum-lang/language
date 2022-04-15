@@ -575,4 +575,10 @@ for {
 var response = await http_get();
 ```
 
+Importante lembrar que em linhas gerais, assim como os valores de uma variáveis são preservados enquanto aquele contexto existir (como por exemplo, o contexto de uma função, ou bloco de código), da mesma maneira ocorre com variáveis que recebem um valor vindo de uma função assíncrona.
+
+De modo que a partir do momento em que a função assíncrona é executada, ou seja, iniciada, após isto, a qualquer momento a variável em questão pode receber um valor.
+
+Desde modo é executado de maneira sequencial o código síncrono, e quando houver dados, é possível utilizar os mesmos da variável que recebeu dados de uma função assíncrona.
+
 
