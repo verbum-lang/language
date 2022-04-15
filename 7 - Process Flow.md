@@ -55,7 +55,11 @@ Thread-Node
 
 #### Comunicação
 
-A comunicação com um Machine-Node, CPU-Core-Node ou Network-Node, é sempre, em geral, através da rede. Ou seja, no final das contas todos se resumem a interface/api do Network-Node.
+A comunicação com um Machine-Node ou Network-Node, é sempre, em geral, através da rede. Ou seja, no final das contas todos se resumem a interface/api do Network-Node. A comunicação com um node é sempre através da rede.
+
+Para as funções assíncronas, cada uma delas é uma thread dentro de algum CPU Core da infraestrutura disponível. E a comunicação interna da linguagem se dá também através de rede. Com a diferença que é a própria linguagem que faz a gestão das portas IP, e o endereço sempre será localhost.
+
+Quando uma função não existe dentro do escopo local do node, ele verifica se a mesma existe no node superior que o criou.
 
 
 #### Extras
