@@ -561,7 +561,7 @@ async fn http_get (link :string) -> string {
 // Exemplo onde não aguardamos o retorno final de http_get().
 // Observe que o valor de 'response' será modificado no futuro, e
 // enquanto isso não ocorre, seu valor continua como vazio.
-var response = http_get();
+var response = http_get('http://host/path');
 
 for {
     if (response.size() <= 0)
