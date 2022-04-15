@@ -58,3 +58,14 @@ Thread-Node
 A comunicação com um Machine-Node, CPU-Core-Node ou Network-Node, é sempre, em geral, através da rede. Ou seja, no final das contas todos se resumem a interface/api do Network-Node.
 
 
+#### Extras
+
+Noções gerais da existẽncia dos nodes, suas camadas e tipos.
+
+Obs: não necessariamente eles são organizados desse modo, podendo um Machine-Node gerar um Thread-Node a qualquer momento.
+
+<p align="center">
+    <img src="images/fluxo-4.png" />
+</p>
+
+
