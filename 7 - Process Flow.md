@@ -53,4 +53,8 @@ Thread-Node
 
 ```
 
+#### Comunicação
+
+A comunicação com um Machine-Node, CPU-Core-Node ou Network-Node, é sempre, em geral, através da rede. Ou seja, no final das contas todos se resumem a interface/api do Network-Node.
+
 
