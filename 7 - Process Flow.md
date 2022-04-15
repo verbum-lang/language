@@ -64,6 +64,8 @@ Para as funções assíncronas, cada uma delas é uma thread dentro de algum CPU
 
 Quando uma função não existe dentro do escopo local do node, ele verifica se a mesma existe no node superior que o criou.
 
+Portanto, uma função/método <b>async</b>, é sempre um node, e um node de rede.
+
 
 #### Extras
 
