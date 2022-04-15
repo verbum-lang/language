@@ -80,3 +80,13 @@ Obs: não necessariamente eles são organizados desse modo, podendo um Machine-N
 </p>
 
 
+#### Links úteis
+
+https://medium.com/@edytarcio/async-await-introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-ass%C3%ADncrona-em-python-fa30d077018e
+https://dart.dev/codelabs/async-await
+https://en.wikipedia.org/wiki/Async/await
+https://en.wikipedia.org/wiki/Futures_and_promises
+https://medium.com/balta-io/nodejs-async-await-21ca3636252a
+https://hexdocs.pm/elixir/1.13/Task.html
+
+
