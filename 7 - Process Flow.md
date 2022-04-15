@@ -14,3 +14,41 @@ Sendo as funções assíncronas threads distribuídas entre os CPU-Core disponí
 - Um Network-Node é um Machine-Node acessível via rede.
 
 
+O código síncrono é executado em uma única thread, e toda vez que se cria uma função assíncrona, é criada uma nova thread.
+
+Questões gerais:
+
+```
+Machine-Node:
+    Supervisor que possui como infraestrutura todos os Cores CPU disponíveis.
+    
+    Quando se cria uma função Async ou um CPU-Core-Node, é levado em consideração
+    toda a infraestrutura disponível, isto é, todos os Cores de CPU disponíveis.
+
+    Para funções Async, as mesmas são divididas em criação de Thread-Node nos
+    respectivos Cores de CPU disponíveis (de maneira distribuída para usar todo
+    o recurso de modo mais homogeneo).
+
+
+
+CPU-Core-Node:
+    Supervisor que possui como infraestrutura o Core CPU em questão.
+    
+    Quando se cria uma função Async, é criado Thread-Node dentro do Core em questão.
+
+
+
+Thread-Node
+    Supervisor que possui como infraestrutura a própria thread em questão.
+
+    Se trata da própria função async em si.
+
+
+
+Network-Node
+    Todo node é também um Network-Node, pois trata-se da sua interface de comunicação
+    de rede.
+```
+
+
+
