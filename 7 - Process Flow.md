@@ -1,5 +1,7 @@
 ### :arrow_right: Noções do processo de execução.
 
+#### Noções gerais
+
 - Inicia execução.
 - Cria N threads, 1 para cada Core da CPU.
 - Estabelece o core 1 como Supervisor (da infraestrutura).
