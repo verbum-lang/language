@@ -64,6 +64,8 @@ Noções gerais da existẽncia dos nodes, suas camadas e tipos.
 
 Obs: não necessariamente eles são organizados desse modo, podendo um Machine-Node gerar um Thread-Node a qualquer momento.
 
+<br><Br>
+
 <p align="center">
     <img src="images/fluxo-4.png" />
 </p>
