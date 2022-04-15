@@ -22,6 +22,9 @@
 - Polimorfismo dinâmico
 - Funções especiais
 
+<b>Async/await</b>
+- Noções gerais
+
 ### Operadores
 ```
 Aritméticos.
@@ -544,6 +547,32 @@ destroy(objA);
 // Serialization.
 var stringObject :string = serialize(objA);
 var objN :ClassName = unserialize(stringObject);
+```
+
+### Async/await
+
+#### Noções gerais
+```javascript
+async fn http_get (link :string) -> string {
+    ...
+    ret response;
+}
+
+// Exemplo onde não aguardamos o retorno final de http_get().
+// Observe que o valor de 'response' será modificado no futuro, e
+// enquanto isso não ocorre, seu valor continua como vazio.
+var response = http_get();
+
+for {
+    if (response.size() <= 0)
+        next;
+
+    print("response: {}\n", response);
+    break;
+}
+
+// Exemplo onde aguardamos o retorno de http_get().
+var response = await http_get();
 ```
 
 
