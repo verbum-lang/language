@@ -25,6 +25,10 @@
 <b>Async/await</b>
 - Noções gerais
 
+<b>Controle de erros</b>
+- Noções gerais
+
+
 ### Operadores
 ```
 Aritméticos.
@@ -580,5 +584,19 @@ Importante lembrar que em linhas gerais, assim como os valores de uma variáveis
 De modo que a partir do momento em que a função assíncrona é executada, ou seja, iniciada, após isto, a qualquer momento a variável em questão pode receber um valor.
 
 Desde modo é executado de maneira sequencial o código síncrono, e quando houver dados, é possível utilizar os mesmos da variável que recebeu dados de uma função assíncrona.
+
+### Controle de erros
+
+#### Noções gerais
+
+Se usa o <b>try</b> e <b>catch</b> para fazer o tratamento dos erros da própria Verbum VM.
+
+```javascript
+try {
+    var response = await http_get('http://host/path');
+} catch (err) {
+    print("Error: {}\n", err);
+}
+```
 
 
