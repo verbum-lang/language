@@ -572,7 +572,7 @@ for {
 }
 
 // Exemplo onde aguardamos o retorno de http_get().
-var response = await http_get();
+var response = await http_get('http://host/path');
 ```
 
 Importante lembrar que em linhas gerais, assim como os valores de uma variáveis são preservados enquanto aquele contexto existir (como por exemplo, o contexto de uma função, ou bloco de código), da mesma maneira ocorre com variáveis que recebem um valor vindo de uma função assíncrona.
