@@ -499,6 +499,7 @@ obj2.getExampleB();         // Verbum
 ```
 
 <b>Método em cascata (fluent interface, method cascading, concretely method chaining).</b>
+Obs: atualmente não suportado, mas futuramente será.
 
 ```php
 class Example {
