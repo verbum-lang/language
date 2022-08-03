@@ -1,23 +1,22 @@
 ### Array
 
-Há dois tipos de array, indexado e associativo.
+Há dois tipos de array, <b>indexado</b> e <b>associativo</b>.
 
 É permitido adicionar elementos em arrays de modo dinamico, Sem a necessidade de usar funções especiais para "push" e afins. Por exemplo, caso o index, ou a hash, não exista, os mesmos são criados em tempo de execução, e passa portanto, a existir.
 
-Note que a especificação do tipo não é obrigatória, caso o mesmo não seja especificado, ocorrerá inferência de tipo.
-No entanto, a depender da situação, é obrigatório a especificição.
+Vale lembrar que a especificação do tipo não é obrigatória, caso o mesmo não seja especificado, ocorrerá inferência de tipo.
+
+Também vale lembrar que é possível mesclá-los.
 
 <b>Array indexado:</b>
 
 ```php
-// Examplos.
+example = [ 3, 1, 3, 3, 7 ];
+example = [ 'V', '♥', true, "Verbum 😍" ];
+example = [ 10 :int, 20 :int, 30.3, 40 :double, true, n ];
+example = [ ];
 
-variable :array = [ 3, 1, 3, 3, 7 ];
-variable :array = [ 'V', '♥', true, "Verbum 😍" ];
-variable :array = [ 10 :int, 20 :int, 30.3, 40 :double, true, n ];
-variable = [ ];
-
-variable :array = [
+example :array = [
     1, 2, 3,
     [
         'a', 'b', 'c',
@@ -34,40 +33,44 @@ variable :array = [
 <b>Array associativo:</b>
 
 ```php
-// Exemplos.
+example = {};
 
-variable = {};
+example = {
+    value: 1.337 :double
+};
 
-variable :array = {
+example = {
     items: [
         { name: "Verbum"  },
         { name: "Divinus" },
         {
             values: [
-                10, 20, 30:double, { name: "Member" }
+                10, 20, 30 :double, { name: "Member" }
             ]
         },
         31337
     ]
-};
-
-variable = {
-    value: 1.337 :double
 };
 ```
 
 Segue alguns exemplos dos modos possíveis de acessar os elementos dos arrays.
 
 ```php
-variable['items'][0]['name']                    // Verbum
-variable['items'][1]['name']                    // Divinus
-variable['items'][2]['values'][0]               // 10
-variable['items'][2]['values'][3]['name']       // Member
-variable['items'][3]                            // 31337
+example['items'][0]['name']                    // Verbum
+example['items'][1]['name']                    // Divinus
+example['items'][2]['values'][0]               // 10
+example['items'][2]['values'][3]['name']       // Member
+example['items'][3]                            // 31337
 
-variable[a]
-variable[a+b]
-variable[a+(b*2)]
+// Outros casos de exemplo.
+example[a]
+example[ a + b ]
+example[ a + (b*2) ]
 ```
+
+Os casos de acesso permitidos nos elementos de um array:
+
+- <b>string</b>, sendo utilizadas para acesso aos elementos de arrays associativos.
+- <b>expressões resultando um número inteiro</b>, ou seja, é permitido o uso de números inteiros, variáveis, e expressões aritméticas. Note que para as <b>expressões aritméticas</b>, se a mesma retornar um valor diferente de um número inteiro, será realizada a conversão do valor para um número inteiro (casting).
 
 
