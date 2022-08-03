@@ -9,5 +9,5 @@ Um sistema (camada 3) pode ter seu processamento distribuído em uma rede de nod
 <img src="../0%20-%20extras/diagram/general-1.png"/>
 </p>
 
-
+asas
 
