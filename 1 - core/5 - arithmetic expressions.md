@@ -1,20 +1,24 @@
 ### Expressões aritméticas
 
-Alguns exemplos.
+O seu uso é feito como geralmente o é nas linguagens populares.
+
+Vale citar que dentro de array é possível também inserir as expressões aritméticas.
+
+Segue alguns exemplos.
 
 ```php
 // Atribuição de valores à variáveis simples.
-variable = (10 + (variable++) + (3.14 * 3) / --abc) - 10;
+example = (10 + (example++) + (3.14 * 3) / --abc) - 10;
 
 // Como elemento em arrays indexados.
-variable = [
+example = [
     1, 2, 3,
     (10 + ( 20 * 3 ) / 4),
     'str 1', "str 2"
 ];
 
 // Como elemento em arrays associativos.
-variable :array = [
+example = [
     { name:  "Verbum" },
     {
         value: 'Divino',
