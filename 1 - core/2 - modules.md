@@ -4,7 +4,7 @@ O comando utilizado para realizar o uso de módulos, é o <b>use</b>.<br>
 Quando se diz módulos, estamos nos referindo a arquivos de cabeçalho, ou seja, a possibilidade de utilizar bibliotecas externas.
 
 Há dois modos de usar módulos:
-- <b>módulos padrões</b>: são bibliotecas pertencentes a biblioteca padrão.
+- <b>módulos padrões</b>: são bibliotecas pertencentes a biblioteca padrão. Isto é, as que vieram por padrão na instalação da linguagem, e as que foram posteriormente instaladas.
 - <b>módulos locais</b>: são bibliotecas referenciadas pelo caminho do diretório onde a mesma se encontra.
 
 O modo mais simples de utilizar um módulo é apenas colocando o nome do mesmo:
@@ -37,25 +37,35 @@ use 'path/path/file';  // Carrega módulo de diretório específico.
 
 Importante saber que esse modo de poder referenciar os módulos padrões foi criado para melhor organização da linguagem. De modo que tais módulos (que também podem ser chamados de pacotes), poderão ser instalados remotamente ou localmente, isto é, baixar um módulo e utilizando de comandos do gerenciador de pacote da linguagem, instalá-los no diretório das bibliotecas padrão. De modo que tais módulos possam ser utilizados em qualquer projeto, bastante especificar o módulo. Apenas em casos específicos, que realmente convir, devemos utilizar a importação de módulos locais (como por exemplo na criação de um sistema, onde dividimos suas partes em vários arquivos).
 
+Por fim, podemos também importar vários módulos de uma vez.
 
+Para importarmos todos os sub-módulos contidos dentro de um módulo, podemos usar o <b>asterismo (*)</b>. Isto é possível para módulos da biblioteca padrão, e para importações a partir de diretórios específicos.
+
+Note que ainda persiste a noção de explicitarmos, com o uso do <b>dois pontos (:)</b>, ou utilizando a <b>barra (/)</b>, se estamos importando da biblioteca padrão, ou de algum diretório específico.
 
 ```c
-// Todos arquivos dentro de um pacote instalado, ou de diretório específico.
-use 'std:*';
-use 'path/*';
+use 'std:*';   // Importa da biblioteca padrão.
+use 'path/*';  // Importa de diretório específico.
+```
 
-// Importações únicas.
-use 'std:io';
-use 'std:io/file';
-use 'test';
-use 'path/path/test';
+Para casos onde desejamos importar apenas uma sequência específica de sub-módulos, podemos especifica-los dentro das <b>setas de abertura e fechamento (< >)</b>.
 
+```c
 // Importações múltiplas (dentro de um único módulo ou diretório).
 use 'std:<io, net, os, string>';
 use 'path/<file1, file2, file3>';
+```
 
-// Importações múltiplas em uma única linha.
+Podemos também realizar várias importações em um único comando.
+
+```c
 use 'std:<io,net>', 'path/test', 'util';
 use 'path2/*', 'mysql:*', 'json:unicode';
+
+// Com quebra de linha.
+use 'std:<io,net>', 
+    'path/test', 
+    'util';
 ```
+
 
