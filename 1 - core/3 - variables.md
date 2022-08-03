@@ -47,3 +47,26 @@ example = "
 ";
 ```
 
+Concatenação de dados em string.
+
+```c
+str = 'Santo';
+print('Deus é {str}\n');
+
+num = 10;
+print('Value: {str}\n');
+```
+
+Comparação de strings. Note que o que é comparado, é sempre os dados.
+
+```c
+if ('str1' == 'str1')
+    print("Strings iguais.\n");
+
+// Caso utilizando variável.
+str = 'str1';
+if (str == 'str1')
+    print("Strings iguais.\n");
+```
+
+
