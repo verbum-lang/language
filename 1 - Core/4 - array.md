@@ -4,6 +4,9 @@ Há dois tipos de array, indexado e associativo.
 
 É permitido adicionar elementos em arrays de modo dinamico, Sem a necessidade de usar funções especiais para "push" e afins. Por exemplo, caso o index, ou a hash, não exista, os mesmos são criados em tempo de execução, e passa portanto, a existir.
 
+Note que a especificação do tipo não é obrigatória, caso o mesmo não seja especificado, ocorrerá inferência de tipo.
+No entanto, a depender da situação, é obrigatório a especificição.
+
 <b>Array indexado:</b>
 
 ```php
