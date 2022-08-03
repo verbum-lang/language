@@ -6,7 +6,8 @@ Os comentários são definidos como em geral o é nas linguagens populares.
 // Comentário de única linha.
 
 /*
-    Comentário de múltiplas linhas.
+    Comentário de 
+    múltiplas linhas.
 */
 ```
 
