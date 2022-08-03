@@ -1,7 +1,10 @@
 ### Módulos
 
-O comando utilizado para realizar o uso de módulos, é o <b>use</b>.
+O comando utilizado para realizar o uso de módulos, é o <b>use</b>.<br>
 Quando se diz módulos, estamos nos referindo a arquivos de cabeçalho, ou seja, a possibilidade de utilizar bibliotecas externas.
+
+Há dois modos de usar módulos:
+- <b>módulos padrões</b>: são bibliotecas pertencentes a biblioteca padrão.
 
 ```c
 // Todos arquivos dentro de um pacote instalado, ou de diretório específico.
