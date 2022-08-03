@@ -53,4 +53,18 @@ variable = {
 };
 ```
 
+Segue alguns exemplos dos modos possíveis de acessar os elementos dos arrays.
+
+```rust
+variable['items'][0]['name']                    // Verbum
+variable['items'][1]['name']                    // Divinus
+variable['items'][2]['values'][0]               // 10
+variable['items'][2]['values'][3]['name']       // Member
+variable['items'][3]                            // 31337
+
+variable[a]
+variable[a+b]
+variable[a+(b*2)]
+```
+
 
