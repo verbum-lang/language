@@ -6,7 +6,7 @@ Há dois tipos de array, indexado e associativo.
 
 <b>Array indexado:</b>
 
-```rust
+```php
 // Examplos.
 
 variable :array = [ 3, 1, 3, 3, 7 ];
@@ -30,7 +30,7 @@ variable :array = [
 
 <b>Array associativo:</b>
 
-```rust
+```php
 // Exemplos.
 
 variable = {};
@@ -55,7 +55,7 @@ variable = {
 
 Segue alguns exemplos dos modos possíveis de acessar os elementos dos arrays.
 
-```rust
+```php
 variable['items'][0]['name']                    // Verbum
 variable['items'][1]['name']                    // Divinus
 variable['items'][2]['values'][0]               // 10
