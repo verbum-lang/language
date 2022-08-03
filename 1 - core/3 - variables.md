@@ -28,12 +28,17 @@ example :array     = {};                            // associativo.
 example :double    = 10 * 10 + (a + 20);            // operação aritmética, retorna valor numérico (int, double).
 ```
 
+Note que nos exemplos acima foram utilizados caracteres unicode dentro de strings.<br>
+No entanto é bom saber que o suporte unicode é aplicável em toda a linguagem.
 
-// O UNICODE é aceito no uso comum da linguagem.
-// Isto é, em nome de variáveis, e caracteres dentro de strings.
+```c
 λ = "Verbum ♥";
 π = 3.14;
+```
 
+Importante saber também que na declaração de strings, é aceito strings de uma única linha, mas também é aceito quebra de linha dentro das strings.
+
+```c
 // String de múltiplas linhas.
 // Obs: os \n estão incluso dentro da string.
 example = "
