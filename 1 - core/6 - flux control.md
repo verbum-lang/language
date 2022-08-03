@@ -1,11 +1,8 @@
 ### Controle de fluxo
 
-
-
 Condicionais.
 
 ```python
-// Exemplo sem o uso de chaves.
 if (expression) 
     print("value 1");
 elif (expression)
