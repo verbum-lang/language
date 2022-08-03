@@ -8,6 +8,7 @@ Um sistema (camada 3) pode ter seu processamento distribuído em uma rede de nod
 <br>
 <img src="../0%20-%20extras/diagram/general-1.png"/>
 <br>
+<br>
 </p>
 
 Em outras palavras, o Networks trata-se de uma abstração da infraestrutura disponível, podendo configurar um agrupamento de máquinas distribuídas em rede, para posteriormente utilizá-las como uma infraestrutura computacional unificada.
