@@ -34,7 +34,7 @@ for (a=0; a<10) {
     a++;
 }
 
-// Equivalente ao while. Apenas condição
+// Equivalente ao while. Apenas condição.
 for (a < 10)
     print("a: {}\n", a);
 
