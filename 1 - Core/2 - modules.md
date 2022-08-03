@@ -1,6 +1,7 @@
 ### Módulos
 
-
+O comando utilizado para realizar o uso de módulos, é o <b>use</b>.
+Quando se diz módulos, estamos nos referindo a arquivos de cabeçalho, ou seja, a possibilidade de utilizar bibliotecas externas.
 
 ```c
 // Todos arquivos dentro de um pacote instalado, ou de diretório específico.
@@ -20,6 +21,5 @@ use 'path/<file1, file2, file3>';
 // Importações múltiplas em uma única linha.
 use 'std:<io,net>', 'path/test', 'util';
 use 'path2/*', 'mysql:*', 'json:unicode';
-
 ```
 
