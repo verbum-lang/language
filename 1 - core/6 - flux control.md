@@ -1,14 +1,25 @@
 ### Controle de fluxo
 
+
+
 Condicionais.
 
 ```python
+// Exemplo sem o uso de chaves.
 if (expression) 
     print("value 1");
 elif (expression)
     print("value 2");
 else
     print("value 3");
+```
+
+```c
+// Exemplo utilizando chaves.
+if (expression) {
+    print("Iesus is Verbum!\n");
+    print("Verbum is God!\n");
+}
 ```
 
 Loops.
