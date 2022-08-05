@@ -6,7 +6,7 @@ Um sistema (camada 3) pode ter seu processamento distribuído em uma rede de nod
 
 <p align="center" >
 <br>
-<img src="../0%20-%20extras/diagram/general-1.png"/>
+<img src="../0%20-%20extras/diagram/general-1.png" />
 <br>
 <br>
 </p>
