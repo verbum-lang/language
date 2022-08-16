@@ -2,9 +2,9 @@
 
 ****
 
-Também chamado de <b>Networks</b>, trata-se do setor responsável pela configuração e gestão da organização da infraestrutura. 
+Também chamado de <b>Layer 1</b>, trata-se do setor responsável pela configuração e gestão da organização da infraestrutura física. 
 
-Um sistema (camada 3) pode ter seu processamento distribuído em uma rede de nodes (camada 2). Por sua vez, estes nodes podem ser máquinas acessíveis via rede (camada 1), ou processos.
+Um sistema (Layer 3) pode ter seu processamento distribuído em uma rede de nodes (Layer 2). Por sua vez, estes nodes podem ser processos e sub-processos (Layer 1).
 
 <p align="center" >
 <br>
@@ -13,7 +13,7 @@ Um sistema (camada 3) pode ter seu processamento distribuído em uma rede de nod
 <br>
 </p>
 
-Em outras palavras, o Networks trata-se de uma abstração da infraestrutura disponível, podendo configurar um agrupamento de máquinas distribuídas em rede, para posteriormente utilizá-las como uma infraestrutura computacional unificada.
+Em outras palavras, o Layer 1 trata-se de uma abstração da infraestrutura física disponível, podendo configurar um agrupamento de máquinas distribuídas em rede, para posteriormente utilizá-las como uma infraestrutura computacional unificada, ou algo semelhante.
 
 ****
 
