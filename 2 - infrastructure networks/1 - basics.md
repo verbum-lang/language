@@ -17,4 +17,11 @@ Em outras palavras, o Layer 1 trata-se de uma abstração da infraestrutura fís
 
 ****
 
+### <b>Layer 1</b>
+
+A camada 1 é criada ao interconectar máquinas físicas numa infraestrutura de baseada em rede. Essa conexão entre as máquinas é realizada utilizando a suite da linguagem.
+
+Na prática, utilizando a suite da linguagem se terá um node rodando num único processo. É possível abrir quantos processos quiser, ou seja, é possível criar uma infraestrutura de camada 1 utilizando várias conexões sem necessariamente ser preciso executar apenas um processo principal por máquina física.
+
+Tratando-se de uma infraestrutura física, deve-se possuir um meio de conferir confiabilidade a algum determinado node desta camada 1. Para isto existe o conceito de <b>Node Mapper</b>.
 
