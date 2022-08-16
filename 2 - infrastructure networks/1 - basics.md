@@ -1,4 +1,6 @@
-### Infrastructure Networks
+### <b>Infrastructure Networks</b>
+
+****
 
 Também chamado de <b>Networks</b>, trata-se do setor responsável pela configuração e gestão da organização da infraestrutura. 
 
@@ -12,5 +14,7 @@ Um sistema (camada 3) pode ter seu processamento distribuído em uma rede de nod
 </p>
 
 Em outras palavras, o Networks trata-se de uma abstração da infraestrutura disponível, podendo configurar um agrupamento de máquinas distribuídas em rede, para posteriormente utilizá-las como uma infraestrutura computacional unificada.
+
+****
 
 
