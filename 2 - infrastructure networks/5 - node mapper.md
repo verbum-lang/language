@@ -36,6 +36,8 @@ Os nodes de camada 1 são gestionados através das operações do Node Mapper, p
 
 - Ao <b>migrar</b> um node real, o que ocorre é que todas as coisas componentes deste node serão copiadas para outro node. Em casos onde envolvem conexões de rede abertas, tais como se o node em questão ser algum servidor HTTP, ou coisa semelhante, tais conexões serão resetadas neste momento, podendo haver perda de dados (a gestão dessas informações ficam a critério do design do sistema). Do mesmo modo, interações com o sistema de arquivos pode ser afetado, logo, tais ações também devem ser previstas e melhor arquitetadas no design do sistema. <b>Migrar</b>, em poucas palavras, significa copiar os dados de memória, e toda a AST atual em execução, com todas as informações relacionadas, bem como todos os nodes virtuais criados, isto é, todas as coisas existentes no node real em questão, copiar estas coisas para outro node real destinatário, e por tudo em execução, conservando assim estados do sistema nessa migração.
 
+- Vale citar que na migração o node real em questão não é excluído, apenas suas informações são migradas para outro node real destinatário. A topologia da rede de nodes reais não é afetada em absolutamente nada.
+
 <br>
 
 <b>Questões pertinentes:</b>
