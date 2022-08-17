@@ -38,11 +38,11 @@ Pontos importantes:
 
 <br>
 
-Trata-se de uma abstração para conferir confiabilidade aos nodes componentes da infraestrutura física.
+Trata-se do elemento unificador, responsável por centralizar a gestão dos nodes, independente das camadas as quais pertencem. Bem como, dentre suas funções, possui a de conferir confiabilidade aos nodes, recurso necessário principalmente para a camada física.
 
-A ideia deste conceito é dar um dinamismo para a infraestrutura física, podendo adicionar, remover, ou alterar, nodes componentes desta mesma infraestrutura.
+Se tratando da camada 1, isto é, da camada física, a ideia deste conceito é dar um dinamismo para a infraestrutura física, podendo adicionar, remover, ou alterar, nodes componentes desta mesma infraestrutura.
 
-Os nodes de camada 1 são gestionados através das operações do Node Mapper: adicionar, excluir, migrar.
+Os nodes de camada 1 são gestionados através das operações do Node Mapper, podendo então adicionar, excluir e realizar ações semelhantes.
 
 <br>
 
