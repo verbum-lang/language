@@ -29,7 +29,7 @@ Na prática, utilizando a suite da linguagem se terá um node rodando num único
 
 Tratando-se de uma infraestrutura física, deve-se possuir um meio de conferir confiabilidade a algum determinado node desta camada 1. Para isto existe o conceito de <b>Node Mapper</b> (mais adiante é abordado o mesmo).
 
-Canais de comunicação entre os nodes:
+<b>Organização da rede na infraestrutura física:</b>
 
 <p align="center" >
 <br>
