@@ -7,12 +7,14 @@ Trata-se do elemento unificador, responsável por centralizar a gestão dos node
 
 No Node Mapper ficam distinguidas as duas redes de nodes, a dos <b>nodes reais</b> de camada física, e a dos <b>nodes virtuais</b>, que são sub-processos.
 
+As <b>funções básicas do Node Mapper</b>, tanto para os nodes reais, quanto para os nodes virtuais, são as de adicionar, excluir, e migrar.
+
 <br>
 
-<b>Funções do Node Mapper:</b>
+****
+### <b>Arquitetura</b>
 
-- <b>Layer 1 - Nodes Reais:</b> adicionar, excluir, migrar.
-- <b>Layer 2 - Nodes Virtuais:</b> .
+
 
 <br>
 
@@ -72,8 +74,6 @@ Podendo então realizar as mesmas operações básicas de <b>adicionar</b>, <b>e
   
 - Do mesmo modo que acima, podem ser realizadas as operações de <b>exclusão</b> e <b>migração</b> de nodes virtuais.
 
-- A respeito da <b>migração</b> serão migrados todas as coisas hierarquicamente inferiores ao próprio node virtual em questão, isto é, outros nodes criados a partir do mesmo, AST das coisas em execução, e todas as informações relacionadas.
-
-- 
+- A respeito da <b>migração</b>, serão migrados todas as coisas hierarquicamente inferiores ao próprio node virtual em questão, isto é, outros nodes criados a partir do mesmo, AST das coisas em execução, e todas as informações relacionadas.
 
 
