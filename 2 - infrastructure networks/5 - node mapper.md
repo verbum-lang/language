@@ -14,11 +14,19 @@ As <b>funções básicas do Node Mapper</b>, tanto para os nodes reais, quanto p
 ****
 ### <b>Arquitetura</b>
 
+<br> 
+
+O Node Mapper trata-se de um <b>elemento unificador</b> para gestão dos nodes componentes, sendo eles de camada 1 ou 2.
+
+Em linhas gerais, o <b>Node Mapper é um servidor</b> que é <b>iniciado na máquina em conjunto com a criação do primeiro processo principal</b>, isto é, o primeiro node real. O mesmo é criado em conjunto, isto é, ele funciona de modo independente, isso implica que o processo que o iniciou pode ser finalizado sem que isso afete no funcionamento do Node Mapper.
+
 <br>
 
 <b>Pontos importantes:</b>
 
 - Cada <b>máquina</b> possui um <b>Node Mapper local</b> para reunir as informações pertencentes aos nodes que ali existem, sejam eles nodes reais ou virtuais.
+
+- A existência do Node Mapper local é <b>persistente</b>, ou seja, caso o processo do mesmo seja por algum motivo finalizado, imediatamente por algum dos nodes, automaticamente e de modo concorrente, será criado um node servidor de Node Mapper local.
 
 - Numa ação de migração <b>simples</b>, isto é, de um node para outro, onde ambos os nodes pertencem a mesma máquina física. A ação é mais simples, pois ambos nodes estão acessíveis através do Node Mapper local. Nestes casos será acessado o Node Mapper local e obtido os ID de ambos os nodes envolvidos na migração, e a migração será então realizada.
 
