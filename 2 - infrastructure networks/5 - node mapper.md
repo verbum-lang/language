@@ -72,4 +72,4 @@ Podendo então realizar as mesmas operações básicas de <b>adicionar</b>, <b>e
   
 - Do mesmo modo que acima, podem ser realizadas as operações de <b>exclusão</b> e <b>migração</b> de nodes virtuais.
 
-
+- A respeito da <b>migração</b> serão migrados todas as coisas hierarquicamente inferiores ao próprio node virtual em questão, isto é, outros nodes criados a partir do mesmo, AST das coisas em execução, e todas as informações relacionadas.
