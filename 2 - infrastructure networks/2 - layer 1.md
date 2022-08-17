@@ -13,7 +13,7 @@ Tratando-se de uma infraestrutura física, deve-se possuir um meio de conferir c
 
 <p align="center" >
 <br>
-<img src="../0%20-%20extras/diagram/general-3.png" />
+<img src="../0%20-%20extras/diagram/general-3.png?v=1" />
 <br>
 <br>
 </p>
