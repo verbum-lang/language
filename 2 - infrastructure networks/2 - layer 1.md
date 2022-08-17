@@ -22,13 +22,18 @@ Pontos importantes:
 
 - Pode-se organizar uma rede de nodes físicos como preferir.
 
-- Um node pode ter infinitas conexões, e isto se aplica às noções de cliente e servidor. Ou seja, um node pode ter quantos clientes quiser, também pode se conectar em quantos servidores quiser.
+- Um node pode ter infinitas conexões, e isto se aplica às noções de cliente e servidor. Ou seja, um node pode ter quantos clientes quiser, também pode se conectar em quantos servidores quiser. Claro que estes limites estão sujeitos aos limites físicos da própria máquina em questão onde o node está existindo.
 
 - As conexões de rede TCP/IP são todas persistentes. Se não houver comunicação, o node ficará persistindo eternamentem, isto é, enquanto ele existir como processo ou sub-processo na máquina física.
 
+- Quando um novo node de camada 1 vai se conectar a algum outro node da mesma camada, ou seja, será mais um novo node na rede em questão, é necessário o endereço IP da máquina em rede, ou o ID do node, caso ele exista como processo na mesma máquina em questão (neste caso este node será procurado no Node Mapper local).
+
+- 
+
+
 - Os nodes se intercomunicam apenas com nodes da mesma camada. Ou seja, os nodes de camada 1 se comunicam apenas com outros nodes de camada 1.
 
-- Quando um novo node de camada 1 vai se conectar a algum outro node da mesma camada. 
+- Os nodes de camada 2 podem gestionar os nodes de camada 1, mas não é permitido criar um node de camada 2, e querer com que ele se comporte como um node de camada 1, isto é, servindo de suporte para outros nodes de camada 2.
 
 <br>
 
