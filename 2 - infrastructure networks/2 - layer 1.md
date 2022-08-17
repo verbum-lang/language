@@ -58,7 +58,7 @@ Os nodes de camada 1 são gestionados através das operações do Node Mapper, p
 
 - Ao <b>criar</b> um novo node em máquinas que não possuem nenhum node executando, necessariamente se exige que o primeiro node seja criado <b>manualmente</b> utilizando da suite da linguagem.
   
-- Também pode-se criar <b>dinamicamente</b> (via código) novos nodes de camada 1, tais nodes serão novos processos na máquina. Do mesmo modo, pode-se gestioná-los (excluir, migrar, etc). Tal ação é realizada através de algum node já existente.
+- Também pode-se criar <b>dinamicamente</b> (via código, camada 3 / sistema) novos nodes de camada 1, tais nodes serão novos processos na máquina. Do mesmo modo, pode-se gestioná-los (excluir, migrar, etc). Tal ação é realizada através de algum node virtual (camada 2) já existente.
   
 
 <br>
