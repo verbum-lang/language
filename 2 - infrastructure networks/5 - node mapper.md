@@ -14,8 +14,26 @@ As <b>funções básicas do Node Mapper</b>, tanto para os nodes reais, quanto p
 ****
 ### <b>Arquitetura</b>
 
+<br>
 
+<b>Pontos importantes:</b>
 
+- Cada <b>máquina</b> possui um <b>Node Mapper local</b> para reunir as informações pertencentes aos nodes que ali existem, sejam eles nodes reais ou virtuais.
+
+- Numa ação de migração <b>simples</b>, isto é, de um node para outro, onde ambos os nodes pertencem a mesma máquina física. A ação é mais simples, pois ambos nodes estão acessíveis através do Node Mapper local. Nestes casos será acessado o Node Mapper local e obtido os ID de ambos os nodes envolvidos na migração, e a migração será então realizada.
+
+- No entanto, há casos onde ocorre a migração mais <b>complexa</b>, isto é, de um node para outro em posição distante na rede de nodes reais, ou seja, de um node que existe em uma máquina física A, para uma máquina física B. Neste caso ocorre o seguinte: 
+
+    1. É necessário informar o <b>ID</b> do node de destino, pois este ID não existe no Node Mapper local.
+   
+    2. É inserida uma <b>mensagem na rede</b> para confirmar a existência do node de destino. A mensagem é então propagada em toda a rede até chegar no destino, passando assim por todos os pontos da rede. A mensagem possui uma <b>assinatura única</b>, para na sua propagação a mesma não ser propagada de modo duplicado, ou seja, quando um node já enviou aquela mensagem para outro node, fica um registro, para assim evitar reenvia-la sem necessidade (tendo em vista que toda troca de informações entre os nodes exige uma confirmação, para ter certeza que a mensagem foi enviada pro node conectado mais próximo).
+   
+    3. Quando a mensagem <b>encontra seu destino</b>, ou seja, é confirmado que há naquela máquina o respectivo <b>node de destino</b>, então é enviado por esta mesma máquina que validou a ação, também uma mensagem de volta a ser propagada na rede, desta vez confirmando a existência do node em questão.
+   
+    4. Note que tais mensagens são trafegadas através da rede de nodes reais (camada 1).
+
+    5. 
+    
 <br>
 
 ****
