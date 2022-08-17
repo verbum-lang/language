@@ -50,7 +50,7 @@ Os nodes de camada 1 são gestionados através das operações do Node Mapper, p
 
 - Ao <b>criar</b> um node de camada física manualmente ou dinamicamente, em todos os casos é de modo conjunto criado um node virtual (que é um sub-processo num processo principal). Pois na medida em que vai se formando a rede de nodes, também vai automaticamento sendo criada a abstração de camada 2, isto é, dos nodes virtuais. De modo que, <b>proporcionalmente à topologia dos nodes de camada 1, será também criado uma topologia identica de nodes de camada 2.</b> Ficando assim duas redes sobrepostas, uma de camada 1, outra de camada 2. Sendo a topologia básica da camada 2, inicialmente proporcionalmente equivalente a topologia da camada 1. 
 
-- 
+- Mesmo que os nodes virtuais proporcionais à topologia da camada 1 não estejam sendo utilizados, os mesmos existem necessariamente em conjunto com o node real. Pois o mesmo trata-se da camada de abstração de recursos criada, e é sobre esta (camada 2) que será executado o sistema (camada 3).
 
 <br>
 
