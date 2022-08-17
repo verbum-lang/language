@@ -48,7 +48,7 @@ Os nodes de camada 1 são gestionados através das operações do Node Mapper, p
 
 <b>Questões gerais:</b>
 
-- Ao <b>criar</b> um node de camada física manualmente ou dinamicamente, em todos os casos é de modo conjunto criado um node virtual (que é um sub-processo num processo principal). Pois na medida em que vai se formando a rede de nodes, também vai automaticamento sendo criada a abstração de camada 2, isto é, dos nodes virtuais. De modo que, <b>proporcionalmente à topologia dos nodes de camada 1, será também criado uma topologia identica de nodes de camada 2.</b> Ficando assim duas redes sobrepostas, uma de camada 1, outra de camada 2.
+- Ao <b>criar</b> um node de camada física manualmente ou dinamicamente, em todos os casos é de modo conjunto criado um node virtual (que é um sub-processo num processo principal). Pois na medida em que vai se formando a rede de nodes, também vai automaticamento sendo criada a abstração de camada 2, isto é, dos nodes virtuais. De modo que, <b>proporcionalmente à topologia dos nodes de camada 1, será também criado uma topologia identica de nodes de camada 2.</b> Ficando assim duas redes sobrepostas, uma de camada 1, outra de camada 2. Sendo a topologia básica da camada 2, inicialmente proporcionalmente equivalente a topologia da camada 1. 
 
 - 
 
@@ -57,9 +57,8 @@ Os nodes de camada 1 são gestionados através das operações do Node Mapper, p
 <b>Funcionalidades do Node Mapper:</b>
 
 - Ao <b>criar</b> um novo node em máquinas que não possuem nenhum node executando, necessariamente se exige que o primeiro node seja criado <b>manualmente</b> utilizando da suite da linguagem.
-  
+
 - Também pode-se criar <b>dinamicamente</b> (via código, camada 3 / sistema) novos nodes de camada 1, tais nodes serão novos processos na máquina. Do mesmo modo, pode-se gestioná-los (excluir, migrar, etc). Tal ação é realizada através de algum node virtual (camada 2) já existente.
-  
 
 <br>
 
