@@ -25,7 +25,7 @@ Em outras palavras, o Layer 1 trata-se de uma abstração da infraestrutura fís
 
 A camada 1 é criada ao interconectar máquinas físicas numa infraestrutura de baseada em rede. Essa conexão entre as máquinas é realizada utilizando a suite da linguagem.
 
-Na prática, utilizando a suite da linguagem se terá um node rodando num único processo. É possível abrir quantos processos quiser, ou seja, é possível criar uma infraestrutura de camada 1 utilizando vários nodes, sem necessariamente ser preciso executar apenas um processo principal por máquina física.
+Na prática, utilizando a suite da linguagem se terá um node rodando num único processo. É possível abrir quantos processos quiser, ou seja, é possível criar uma infraestrutura de camada 1 utilizando vários nodes, sem necessariamente ser preciso executar apenas um processo principal por máquina física. Ficando a critério de cada um como será organizada propriamente a infraestrutura física.
 
 Tratando-se de uma infraestrutura física, deve-se possuir um meio de conferir confiabilidade a algum determinado node desta camada 1. Para isto existe o conceito de <b>Node Mapper</b> (mais adiante é abordado o mesmo).
 
@@ -33,18 +33,16 @@ Canais de comunicação entre os nodes:
 
 <p align="center" >
 <br>
-<img src="../0%20-%20extras/diagram/general-2.png" />
+<img src="../0%20-%20extras/diagram/general-3.png" />
 <br>
 <br>
 </p>
 
 Pontos importantes:
 
-- Note que pode haver apenas um sentido num canal de comunicação de um node para outro. E segue a estrutura de cliente e servidor. De modo que o sentido da conexão entre os nodes dão forma a infraestrutura de rede. 
+- Um node pode ter quantas conexões desejar, e isto se aplica às noções de cliente e servidor. Ou seja, um node pode ter quantos clientes quiser, também pode se conectar em quantos servidores quiser.
 
-- Vale mencionar também que isso não implica em ser utilizado apenas uma única conexão TCP/IP, esta regra define apenas ao sentido do canal de comunicação. Ou seja, uma vez que um node é tratado como cliente de outro node, podem ser abertas múltiplas e simultâneas conexões TCP/IP entre os mesmos, mas o sentido da comunicação fica definido por padrão (cliente ou servidor) para estas mesmas comunicações.
-
-- Todo node é simultâneamente cliente e servidor (mesmo que não tenha nenhum cliente conectado no mesmo).
+- As conexões de rede TCP/IP são todas persistentes. Se não houver comunicação, o node ficará persistindo eternamentem, isto é, enquanto ele existir como processo ou sub-processo na máquina física.
 
 <br>
 
@@ -56,6 +54,7 @@ Pontos importantes:
 
 Trata-se de uma abstração para conferir confiabilidade aos nodes componentes da infraestrutura física.
 
+A ideia deste conceito é dar um dinamismo para a infraestrutura física, podendo adicionar, remover, ou alterar, nodes componentes desta mesma infraestrutura.
 
 
 <br>
