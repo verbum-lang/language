@@ -5,10 +5,19 @@
 
 Trata-se do elemento unificador, responsável por centralizar a gestão dos nodes, independente das camadas as quais pertencem. Bem como, dentre suas funções, possui a de conferir confiabilidade aos nodes, recurso necessário principalmente para a camada física (camada 1).
 
+No Node Mapper ficam distinguidas as duas redes de nodes, a dos <b>nodes reais</b> de camada física, e a dos <b>nodes virtuais</b>, que são sub-processos.
+
+<br>
+
+<b>Funções do Node Mapper:</b>
+
+- <b>Layer 1 - Nodes Reais:</b> adicionar, excluir, migrar.
+- <b>Layer 2 - Nodes Virtuais:</b> .
+
 <br>
 
 ****
-### <b>Layer 1</b>
+### <b>Layer 1 - Nodes Reais</b>
 
 <br>
 
@@ -28,7 +37,7 @@ Os nodes de camada 1 são gestionados através das operações do Node Mapper, p
 
 <b>Funcionalidades básicas do Node Mapper:</b>
 
-- Ao <b>criar</b> um novo node em máquinas que não possuem nenhum node executando, necessariamente se exige que o primeiro node seja criado <b>manualmente</b> utilizando da suite da linguagem.
+- Ao <b>criar/adicionar</b> um novo node em máquinas que não possuem nenhum node executando, necessariamente se exige que o primeiro node seja criado <b>manualmente</b> utilizando da suite da linguagem.
 
 - Também pode-se criar <b>dinamicamente</b> (via código, camada 3 / sistema) novos nodes de camada 1, tais nodes serão novos processos na máquina. Do mesmo modo, pode-se gestioná-los (excluir, migrar, etc). Tal ação é realizada através de algum sistema que está sendo executado em algum node virtual (camada 2) já existente.
   
@@ -44,6 +53,23 @@ Os nodes de camada 1 são gestionados através das operações do Node Mapper, p
 
 - <b>Sobre como lidar com as informações</b>: quando se utiliza um node para interagir com o sistema de arquivos diretamente, bem como ser um servidor em alguma porta de rede, ou alguma ação de natureza semelhante, isto é, alguma ação que não pode simplesmente ser interrompida. Coisa que caso ocorresse acarretaria fatalmente na perda de informações importantes. Nestes casos convêm organizar a arquitetura do sistema de tal maneira que, tais nodes possam ser migrados sem perda de dados. Tal coisa pode ser feita utilizando um node de nível superior que possui como função apenas redirecionar pacotes, informações, e coisas semelhantes, para outros nodes de níveis inferiores. Ou seja, os nodes que processam propriamente informações numa interação maior, tais como com o sistema de arquivos, devem realizar o processamento livremente. E caso seja necessário paralizar este node em questão, deve-se simplesmente interromper o fluxo de informações/dados direcionados ao mesmo. Em seguida, aguardar que o node conclua o processamento de suas respectivas informações. E logo após isto, ou seja, quando o node está sem processar absolutamente nada, simplesmente, por fim, gestioná-lo. Ou seja, podendo excluí-lo, manipulá-lo alterando códigos, e ações semelhantes. Desta maneira, ou com noções semelhantes, se evitam perdas de dados/informações.
 
+<br>
 
+****
+### <b>Layer 2 - Nodes Virtuais</b>
+
+<br>
+
+Assim como na camada 1, o Node Mapper possui como propósito a também dar um certo dinamismo para a camada 2.
+
+Podendo então realizar as mesmas operações básicas de <b>adicionar</b>, <b>excluir</b> e <b>migrar</b> nodes virtuais.
+
+<br>
+
+<b>Exclarecimentos:</b>
+
+- Ao <b>adicionar</b> um novo node, tal operação pode ser feita manualmente através da suite da linguagem, ou dinamicamente através do uso da própria linguagem (código).
+  
+- Do mesmo modo que acima, podem ser realizadas as operações de <b>exclusão</b> e <b>migração</b> de nodes virtuais.
 
 
