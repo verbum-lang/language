@@ -28,7 +28,7 @@ Tratando-se de uma infraestrutura física, deve-se possuir um meio de conferir c
 
 - Quando <b>um novo node</b> de camada 1 vai se conectar a algum outro node da mesma camada, ou seja, será mais um novo node na rede em questão, <b>é necessário o endereço IP da máquina em rede, ou o ID do node</b>, caso ele exista como processo na mesma máquina em questão (neste caso este node será procurado no Node Mapper local).
 
-- <b>Os nodes de camada física podem se conectar apenas a outros nodes da mesma camada.</b> Para as abstrações acima, isto é, de camada 2 (node virtual) e 3 (sistema), apenas o <b>Node Mapper</b> é acessível. Vale citar que através do Node Mapper é possível realizar a gestão dos nodes de camada 1. O importante a se ter em mente é que as abstrações maiores (camadas 2 e 3) são criadas sobre a abstração da camada 1, e por isto não pode um node virtual (camada 2) se comportar como um node real (camada 1), pois o sistema/aplicação será executado sobre a camada 2, isto é, dos nodes virtuais.
+- <b>Os nodes de camada física podem se conectar apenas a outros nodes da mesma camada.</b> Para as abstrações acima, isto é, de camada 2 (node virtual) e 3 (sistema), apenas o <b>Node Mapper</b> é acessível. Vale citar que <b>através do Node Mapper é possível realizar a gestão dos nodes</b> de camada 1. O importante a se ter em mente é que as abstrações maiores (camadas 2 e 3) são criadas sobre a abstração da camada 1, e por isto não pode um node virtual (camada 2) se comportar como um node real (camada 1), pois o sistema/aplicação será executado sobre a camada 2, isto é, dos nodes virtuais.
 
 <br>
 
