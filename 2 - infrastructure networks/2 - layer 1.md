@@ -24,6 +24,10 @@ Pontos importantes:
 
 - As conexões de rede TCP/IP são todas persistentes. Se não houver comunicação, o node ficará persistindo eternamentem, isto é, enquanto ele existir como processo ou sub-processo na máquina física.
 
+- Os nodes se intercomunicam apenas com nodes da mesma camada. Ou seja, os nodes de camada 1 se comunicam apenas com outros nodes de camada 1.
+
+- Quando um novo node de camada 1 vai se conectar a algum outro node da mesma camada. 
+
 <br>
 
 ****
