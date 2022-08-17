@@ -28,11 +28,17 @@ As <b>funções básicas do Node Mapper</b>, tanto para os nodes reais, quanto p
    
     2. É inserida uma <b>mensagem na rede</b> para confirmar a existência do node de destino. A mensagem é então propagada em toda a rede até chegar no destino, passando assim por todos os pontos da rede. A mensagem possui uma <b>assinatura única</b>, para na sua propagação a mesma não ser propagada de modo duplicado, ou seja, quando um node já enviou aquela mensagem para outro node, fica um registro, para assim evitar reenvia-la sem necessidade (tendo em vista que toda troca de informações entre os nodes exige uma confirmação, para ter certeza que a mensagem foi enviada pro node conectado mais próximo).
    
-    3. Quando a mensagem <b>encontra seu destino</b>, ou seja, é confirmado que há naquela máquina o respectivo <b>node de destino</b>, então é enviado por esta mesma máquina que validou a ação, também uma mensagem de volta a ser propagada na rede, desta vez confirmando a existência do node em questão.
+    3. Quando a mensagem <b>encontra seu destino</b>, ou seja, é confirmado que há naquela máquina o respectivo <b>node de destino</b>, então é enviado por esta mesma máquina que validou a ação, também uma mensagem de resposta, a mesma é propagada na rede, desta vez confirmando a existência do node em questão.
    
     4. Note que tais mensagens são trafegadas através da rede de nodes reais (camada 1).
 
-    5. 
+    5. Quando o devido node recebe a <b>mensagem de confirmação</b>, ele passa então a realizar propriamente a migração.
+    
+    6. Congelando o estado do node a ser migrado, copiando suas informações, e transmitindo-as através dos nodes da rede de nodes reais, até que todos os dados cheguem no node destinatário e sejam então carregados.
+    
+    7. Após tudo ser realizado, é também enviada uma mensagem de confirmação final para o node que iniciou a ação. E quando o node que iniciou a ação recebe esta mensagem, ele limpa todos os dados de memória e ações semelhantes do node migrado, deixando o mesmo "zerado".
+   
+    8. E assim finalizando a migração.
     
 <br>
 
