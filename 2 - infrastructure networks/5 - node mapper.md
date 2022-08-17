@@ -30,7 +30,7 @@ Os nodes de camada 1 são gestionados através das operações do Node Mapper, p
 
 - Ao <b>criar</b> um novo node em máquinas que não possuem nenhum node executando, necessariamente se exige que o primeiro node seja criado <b>manualmente</b> utilizando da suite da linguagem.
 
-- Também pode-se criar <b>dinamicamente</b> (via código, camada 3 / sistema) novos nodes de camada 1, tais nodes serão novos processos na máquina. Do mesmo modo, pode-se gestioná-los (excluir, migrar, etc). Tal ação é realizada através de algum node virtual (camada 2) já existente.
+- Também pode-se criar <b>dinamicamente</b> (via código, camada 3 / sistema) novos nodes de camada 1, tais nodes serão novos processos na máquina. Do mesmo modo, pode-se gestioná-los (excluir, migrar, etc). Tal ação é realizada através de algum sistema que está sendo executado em algum node virtual (camada 2) já existente.
   
 - Ao <b>excluir</b> um node real, tudo que há nele é perdido. Logo, antes de simplesmente excluir um node real de uma rede de nodes, deve-se realizar a migração do mesmo, isto é, das coisas contidas no mesmo, para não haver assim perdas. Excluir um node real, significa que o mesmo será removido da rede, ou seja, é enviado uma mensagem ao mesmo para que o processo seja finalizado, e assim ocorrerá, e o mesmo ficará desconectado da rede.
 
