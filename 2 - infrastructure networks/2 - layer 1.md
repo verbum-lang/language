@@ -20,7 +20,7 @@ Tratando-se de uma infraestrutura física, deve-se possuir um meio de conferir c
 
 Pontos importantes:
 
-- Um node pode ter quantas conexões desejar, e isto se aplica às noções de cliente e servidor. Ou seja, um node pode ter quantos clientes quiser, também pode se conectar em quantos servidores quiser.
+- Um node pode ter infinitas conexões, e isto se aplica às noções de cliente e servidor. Ou seja, um node pode ter quantos clientes quiser, também pode se conectar em quantos servidores quiser.
 
 - As conexões de rede TCP/IP são todas persistentes. Se não houver comunicação, o node ficará persistindo eternamentem, isto é, enquanto ele existir como processo ou sub-processo na máquina física.
 
