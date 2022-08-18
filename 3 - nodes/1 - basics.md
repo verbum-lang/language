@@ -46,7 +46,7 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
 
 - <b>node_await</b>: aguarda finalização da função. Trava a execução sequencial.
 
-- <b>node_result</b>: Retorna resultado da função. Retorna array, para verificação. <br> 
+- <b>node_result</b>: retorna resultado da função. Retorna array, para verificação. <br> 
   Componentes do array: 
 ```
     data: dados binários do resultado.
@@ -57,5 +57,7 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
 ```
 
 - <b>node_lock</b>, <b>node_unlock</b>: controle do mutex. Noção de fila de espera.
+  
+- <b>node_information</b>: retorna informações do node, tais como seu ID e outras.
 
 
