@@ -61,7 +61,7 @@ for () {
     for (var a=0; a<3; a++) {
         if (instances[a]['status'] == 1) {
 
-            var response = node_recv_message_from(                                node_get_id(instances[a]['instance']));
+            var response = node_recv_message_from( node_get_id(instances[a]['instance']) );
 
             if (response['status'] == NODE_OK) {
                 
