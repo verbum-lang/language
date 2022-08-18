@@ -27,8 +27,6 @@ fn function1 (node_id :int) {
                 node_send_message(data);
             }
         }
-
-        sleep(1);
     }
 }
 ```
