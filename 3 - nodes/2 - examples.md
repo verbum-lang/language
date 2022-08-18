@@ -31,6 +31,8 @@ Exemplo da utilização de um node virtual específico já existente.
 
 Note que é especificado o <b>ID único</b> do node destinatário. Este ID está acessível através do Node Mapper.
 
+Inicialmente é tentado conectar num node pertencente e acessível ao Node Mapper em questão. Caso não exista registro do mesmo no Node Mapper local, o mesmo é procurado na própria rede, caso seja encontrado, é então realizada a conexão e dado prosseguimento as ações seguintes.
+
 ```js
 // Conexão com o node existente.
 var instance :node { id: 'VerbumNode' } = function1("Puro");
