@@ -8,17 +8,17 @@ Segue alguns exemplos.
 
 ```php
 // Atribuição de valores à variáveis simples.
-example = (10 + (example++) + (3.14 * 3) / --abc) - 10;
+var example = (10 + (example2++) + (3.14 * 3) / --abc) - 10;
 
 // Como elemento em arrays indexados.
-example = [
+var example = [
     1, 2, 3,
     (10 + ( 20 * 3 ) / 4),
     'str 1', "str 2"
 ];
 
 // Como elemento em arrays associativos.
-example = [
+var example = [
     { name:  "Verbum" },
     {
         value: 'Divino',
