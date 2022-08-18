@@ -40,7 +40,7 @@ var status = node_destroy(list['layer2'][0]['instance']);
 
 ****
 
-Cria o equivalente a uma thread assíncrona. No entando, aguarda a sua finalização, e gerencia o retorno de dados.
+Cria o equivalente a uma <b>thread assíncrona</b>. No entando, aguarda a sua finalização, e gerencia o retorno de dados.
 
 ```js
 fn function1 (param: string) -> string {
