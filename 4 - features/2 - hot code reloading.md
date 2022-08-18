@@ -16,4 +16,6 @@ Em linhas gerais a utilidade deste recurso é de poder atualizar partes do siste
 
 - Se a versão atual do código falhar, e as antigas também (caso ocorrer modicações em outras áreas do sistema, que acarrete nesse ponto), o sistema passa a priorizar a mais recente atualização.
 
+Tais noções são realizadas através da suite da linguagem.
+
 
