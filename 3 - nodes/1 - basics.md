@@ -47,7 +47,7 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
 - <b>node_await</b>: aguarda finalização da callback. Trava a execução sequencial.
 
 - <b>node_result</b>: Retorna resultado da callback. Retorna array, para verificação. <br> 
-  Componentes do array: <br>
+  Componentes do array: 
 ```
     data: dados binários do resultado.
     status:
