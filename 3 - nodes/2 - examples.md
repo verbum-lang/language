@@ -4,7 +4,7 @@
 
 Cria o equivalente ao funcionamento de uma <b>thread assíncrona</b>. 
 
-Observação: no final da execução do bloco de código em questão, ao qual a variável pertence (instance), a instância do node <b>não é destruída</b>. Para destruí-lo é necessário utilizar a função <b>node_destroy</b>, passando como parâmetro a variável <b>instance</b>, ou utilizando o retorno das informações do node (como é demonstrado mais abaixo).
+Observação: no final da execução do bloco de código em questão, ao qual a variável pertence (instance), a instância do node <b>não é destruída</b>. Para destruí-lo é necessário utilizar a função <b>node_destroy</b>, passando como parâmetro a variável <b>instance</b>, ou utilizando o retorno das informações do node (como é demonstrado mais abaixo). Mesmo que a execução do próprio código do node chegue ao fim, o mesmo continua existindo e acessível via Node Mapper.
 
 ```js
 fn function1 (param: string) {
