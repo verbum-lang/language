@@ -99,6 +99,9 @@ var status = node_destroy(instance); // Retorna bool.
 // Baseado no retorno das informações carregadas do Node Mapper.
 var list   = node_mapper_list();
 var status = node_destroy(list['layer2'][0]['instance']);
+
+// Baseado no contexto em questão.
+node_destroy(get_node_instance());
 ```
 
 <br>

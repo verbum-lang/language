@@ -64,4 +64,6 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
 
 - <b>node_mapper_list</b>: retorna array contendo a lista dos nodes existentes no Node Mapper local.
 
+- <b>get_node_instance</b>: retorna o handle do node em questão.
+
 
