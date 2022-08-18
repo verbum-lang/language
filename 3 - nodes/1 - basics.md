@@ -46,14 +46,15 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
 
 - <b>node_await</b>: aguarda finalização da callback. Trava a execução sequencial.
 
-- <b>node_result</b>: Retorna resultado da callback. Retorna array, para verificação. <br> Componentes do array: <br>
-    ```
+- <b>node_result</b>: Retorna resultado da callback. Retorna array, para verificação. <br> 
+  Componentes do array: <br>
+```
     data: dados binários do resultado.
     status:
         NODE_OK                 - Resultado OK (recebidos).
         NODE_RESULT_RECEIVING   - Recebendo dados.
         NODE_RESULT_EMPTY       - Nenhum resultado retornado.
-    ```
+```
 
 - <b>node_mutex_lock</b>, <b>node_mutex_unlock</b>: controle do mutex. Noção de fila de espera.
 
