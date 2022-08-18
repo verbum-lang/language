@@ -101,10 +101,15 @@ for () {
 
 ****
 
-### <b>Manipulação de visibilidade de nodes</b>
+### <b>Tráfego de mensagem através da rede</b>
 
 <br>
 
+Tendo em vista que seja de nosso interesse que uma mensagem seja enviada do node A, para o node B. Como mostra a imagem abaixo.
+
+O processo de comunicação é de funcionamento igual ao da conexão de um node em outro baseado no ID. 
+
+Ou seja, o node A envia para seus servidores mais próximos a mensagem, e estes, por sua vez, vai encaminhando a mesma, realizando assim uma propagação na rede de nodes, até encontrar o destinatário, que é o node B.
 
 <p align="center" >
 <br>
@@ -112,7 +117,5 @@ for () {
 <br>
 <br>
 </p>
-
-
 
 
