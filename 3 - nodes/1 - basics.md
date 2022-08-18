@@ -60,4 +60,6 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
   
 - <b>node_information</b>: retorna informações do node, tais como seu ID e outras.
 
+- <b>node_destroy</b>: destroi um node.
+
 

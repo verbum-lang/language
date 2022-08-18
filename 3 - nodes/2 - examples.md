@@ -2,7 +2,9 @@
 
 ****
 
-Cria o equivalente ao funcionamento de uma <b>thread assíncrona</b>. Observação: no final da execução do bloco de código em questão, ao qual a variável pertence, a instância é destruída.
+Cria o equivalente ao funcionamento de uma <b>thread assíncrona</b>. 
+
+Observação: no final da execução do bloco de código em questão, ao qual a variável pertence (instance), a instância do node <b>não é destruída</b>. Para destruí-lo é necessário utilizar a função <b>node_destroy</b>, passando como parâmetro a variável <b>instance</b>, ou utilizando o retorno das informações do node (como é demonstrado mais abaixo).
 
 ```js
 fn function1 (param: string) {
@@ -20,4 +22,18 @@ var instance :node = function1("Puro");
 // Verificação (garante que tudo está em ordem).
 var status = node_check(instance); // Retorna um bool.
 ```
+
+<br>
+
+Exemplo destruindo node.
+
+```js
+// Baseado na variável da instãncia do node.
+var status = node_destroy(instance); // Retorna bool.
+
+// Baseado no retorno das informações carregadas do Node Mapper.
+var list   = node_mapper_list();
+var status = node_destroy(list[0]['instance']);
+```
+
 
