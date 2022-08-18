@@ -108,4 +108,24 @@ Podendo então realizar as mesmas operações básicas de <b>adicionar</b>, <b>e
 
 - A respeito da <b>migração</b>, serão migrados todas as coisas hierarquicamente inferiores ao próprio node virtual em questão, isto é, outros nodes criados a partir do mesmo, AST das coisas em execução, e todas as informações relacionadas.
 
+<br>
+
+****
+### <b>Node Mapper - Unificação</b>
+
+<br>
+
+Há a necessidade de se possuir um ponto de controle central de toda a rede de nodes. Ou seja, algum ponto onde funcione como uma central de comandos e que possui acesso as informações de todos os nodes componentes da rede.
+
+Para suprir essa necessidade existe um comando especial no Node Mapper, para realizar a <b>varredura</b> da rede.
+
+<br>
+
+<b>Questões gerais:</b>
+
+- É inserida uma mensagem na rede, e nela propagada, solicitando as informações de seus Node Mapper locais.
+
+- Tais informações são então reunidas no Node Mapper da máquina em questão, a através do mesmo podem ser realizadas as ações de adicionar, excluir e migrar nodes, sejam eles nodes reais ou virtuais. 
+
+
 
