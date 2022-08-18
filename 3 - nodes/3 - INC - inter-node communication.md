@@ -37,6 +37,7 @@ var instances = [];
 
 for (var a=0; a<3; a++) {
     var instance :node = function1(a);
+
     instances[a] = {
         instance: instance, // Handle do node.
         status: 0,          // Flag para controle da troca de mensagens.
@@ -73,5 +74,11 @@ for () {
     }
 }
 ```
+
+<br>
+
+
+
+
 
 
