@@ -31,7 +31,9 @@ fn function1 (node_id :int) {
         sleep(1);
     }
 }
+```
 
+```js
 // Cria nodes.
 var instances = [];
 
