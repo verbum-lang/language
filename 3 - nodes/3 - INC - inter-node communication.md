@@ -4,7 +4,7 @@
 
 Exemplo de comunicação entre contextos diferentes.
 
-```js
+```php
 // Função para ser executada num node.
 fn function1 (node_id :int) {
     for () {
@@ -60,7 +60,7 @@ for () {
     // Verifica resposta dos nodes.
     for (var a=0; a<3; a++) {
         if (instances[a]['status'] == 1) {
-            
+
             var response = node_recv_message_from(                                node_get_id(instances[a]['instance']));
 
             if (response['status'] == NODE_OK) {
