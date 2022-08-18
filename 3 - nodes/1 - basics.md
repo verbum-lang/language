@@ -51,9 +51,9 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
 ```
     data: dados binários do resultado.
     status:
-        NODE_OK                 - Resultado OK (recebidos).
-        NODE_RESULT_RECEIVING   - Recebendo dados.
-        NODE_RESULT_EMPTY       - Nenhum resultado retornado.
+        <b>NODE_OK</b>                 - Resultado OK (recebidos).
+        <b>NODE_RESULT_RECEIVING</b>   - Recebendo dados.
+        <b>NODE_RESULT_EMPTY</b>       - Nenhum resultado retornado.
 ```
 
 - <b>node_mutex_lock</b>, <b>node_mutex_unlock</b>: controle do mutex. Noção de fila de espera.
