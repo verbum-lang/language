@@ -11,12 +11,12 @@ Também vale lembrar que é possível mesclá-los.
 <b>Array indexado:</b>
 
 ```php
-example = [ 3, 1, 3, 3, 7 ];
-example = [ 'V', '♥', true, "Verbum 😍" ];
-example = [ 10 :int, 20 :int, 30.3, 40 :double, true, n ];
-example = [ ];
+var example = [ 3, 1, 3, 3, 7 ];
+var example = [ 'V', '♥', true, "Verbum 😍" ];
+var example = [ 10 :int, 20 :int, 30.3, 40 :double, true, n ];
+var example = [ ];
 
-example :array = [
+var example :array = [
     1, 2, 3,
     [
         'a', 'b', 'c',
@@ -33,13 +33,13 @@ example :array = [
 <b>Array associativo:</b>
 
 ```php
-example = {};
+var example = {};
 
-example = {
+var example = {
     value: 1.337 :double
 };
 
-example = {
+var example = {
     items: [
         { name: "Verbum"  },
         { name: "Divinus" },

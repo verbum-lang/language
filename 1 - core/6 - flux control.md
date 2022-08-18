@@ -23,21 +23,21 @@ Loops.
 
 ```php
 // Comum.
-for (a = 0; a<100; a++)
+for (var a = 0; a<100; a++)
     print("Hello world\n");
 
-for (a = 0; ; a++) {
+for (var a = 0; ; a++) {
     if (a >= 100)
         break;
 }
 
-for (a = 0; ; a++) {
+for (var a = 0; ; a++) {
     if (a < 100)
         next;
 }
 
 // Sem incremento.
-for (a=0; a<10) {
+for (var a=0; a<10) {
     print("Data...\n");
     a++;
 }
