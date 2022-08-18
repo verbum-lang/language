@@ -49,7 +49,7 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
 - <b>node_result</b>: retorna resultado da função. Retorna array, para verificação. <br> 
   Componentes do array: 
 ```
-    data: dados binários do resultado.
+    data: dados do resultado.
     status:
         NODE_OK                 - Resultado OK (recebidos).
         NODE_RESULT_RECEIVING   - Recebendo dados.
