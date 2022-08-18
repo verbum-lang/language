@@ -28,4 +28,35 @@ Em outras palavras, os nodes procuram suprir as necessidades envolvendo os conce
 
 7. Quando um node de rede retorna alguma informação de maneira nativa, ou seja, através do uso comum da linguagem, como no acesso a algum recurso externo (como uma variável global) ele utiliza da abstração do <b>Protocolo de Comunicação</b> para se comunicar com os nodes de nível hierarquico superior.
 
+<br>
+
+****
+
+### <b>Funções especiais</b>
+
+<br>
+
+A existência da abstração dos nodes se dá através de sua interface na linguagem, logo existe um conjunto de funções especiais para realizar/acessar tais recursos.
+
+<br>
+
+<b>Funções:</b>
+
+- <b>node_check_connection</b>: verifica conexão do node de rede. Utilizado para garantir que a conexão está em ordem, para caso não estiver, tomar alguma ação.
+
+- <b>node_await</b>: aguarda finalização da callback. Trava a execução sequencial.
+
+- <b>node_result</b>: Retorna resultado da callback. Retorna array, para verificação.
+<br>
+    Componentes do array:
+    ```
+    data: dados binários do resultado.
+    status:
+        NODE_OK                 - Resultado OK (recebidos).
+        NODE_RESULT_RECEIVING   - Recebendo dados.
+        NODE_RESULT_EMPTY       - Nenhum resultado retornado.
+    ```
+
+- <b>node_mutex_lock</b>, <b>node_mutex_unlock</b>: controle do mutex. Noção de fila de espera.
+
 
