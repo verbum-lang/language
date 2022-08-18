@@ -6,6 +6,8 @@ Em linhas gerais a alta tolerância a erros se traduz principalmente nas seguint
 
 - Caso ocorra erro em uma conexão de rede, fica-se em loop realizando tentativas de conexão infinitamente, até a conexão ser re-estabelecida.
 
+- Caso ocorra algum erro de execução, como acessar algum dado nulo, em branco, ou noção semelhante, bem como caso ocorrer algum acesso a algum recurso inacessível, ou retornar erros em funções, dentre erros semelhantes, a aplicação não se encerra.
+
 - Caso ocorra uma falha em alguma execução, o estado do erro é armazenado em log para realizar a depuração.
 
 - Ver texto a respeito do Hot Code Reloading para informações sobre esse ponto.
