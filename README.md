@@ -1,4 +1,3 @@
-### Verbum Programming Language ^_^
 
 ```
  __      __       _                   Language
@@ -8,8 +7,6 @@
     \  /  __/ |  | |_) | |_| | | | | | |
      \/ \___|_|  |_.__/ \__,_|_| |_| |_|
 ```
-
-![GitHub repo size](https://img.shields.io/github/repo-size/verbum-lang/language?style=for-the-badge)
 
 Verbum, uma linguagem de programação de sintaxe simples e intuitiva, suporta conceitos gerais como das linguagens de propósito geral, como programação procedural. Possui recursos próprios de linguagens modernas, como suporte nativo a computação distribuída, paralela e concorrente, meta-programação, hot cod reloading, alta tolerância a falhas e capacidade de escalabilidade vetical e horizontal. 
 
