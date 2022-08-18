@@ -36,4 +36,25 @@ var list   = node_mapper_list();
 var status = node_destroy(list['layer2'][0]['instance']);
 ```
 
+<br>
+
+****
+
+Cria o equivalente a uma thread assíncrona. No entando, aguarda a sua finalização, e gerencia o retorno de dados.
+
+```js
+fn function1 (param: string) -> string {
+    ret 'Deus eh Santo {param}!\n';
+}
+
+var instance :node = function1("Puro");
+
+// Trava a execução, aguardando o retorno/finalização do node.
+node_await(instance);
+
+// retorna tipo de acordo com a função.
+var result = node_result(instance);
+
+print("Value: { result['data'] }\n");
+```
 
