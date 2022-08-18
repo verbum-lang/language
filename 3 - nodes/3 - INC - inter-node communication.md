@@ -2,7 +2,25 @@
 
 ****
 
-Exemplo de comunicação entre contextos diferentes.
+A INC trata-se da abstração responsável por realizar a comunicação entre os contextos e nodes. Podendo realizar a troca de mensagens de um node para com o contexto hierarquicamente superior em um nível, e vice-versa. Bem como realizar esta troca de mensagens de um node para com o outro, independente de seus níveis hierárquicos.
+
+<br>
+
+<b>Funções especiais:</b>
+
+- <b>node_send_message</b>: envia mensagem para contexto acima.
+
+- <b>node_recv_message</b>: recebe mensagem de contexto acima.
+
+- <b>node_get_id</b>: retorna ID de node baseado no seu handle.
+
+- <b>node_send_message_to</b>: envia mensagem para node específico.
+
+- <b>node_recv_message_from</b>: recebe mensagem de node específico.
+
+<br>
+
+<b>Exemplo de comunicação entre contextos diferentes.</b>
 
 ```php
 // Função para ser executada num node.
@@ -13,7 +31,7 @@ fn function1 (node_id :int) {
         if (command['status'] == NODE_OK) {
             if (command['data'] == 'cmd1') {
                 
-                var data_struct :array = [];
+                var data_struct = [];
 
                 // ...
                 
@@ -30,6 +48,10 @@ fn function1 (node_id :int) {
     }
 }
 ```
+
+<br>
+
+Cria vários nodes e realiza a troca de mensagens com todos.
 
 ```js
 // Cria nodes.
