@@ -56,6 +56,6 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
         NODE_RESULT_EMPTY       - Nenhum resultado retornado.
 ```
 
-- <b>node_mutex_lock</b>, <b>node_mutex_unlock</b>: controle do mutex. Noção de fila de espera.
+- <b>node_lock</b>, <b>node_unlock</b>: controle do mutex. Noção de fila de espera.
 
 
