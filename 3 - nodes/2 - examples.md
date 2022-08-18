@@ -194,4 +194,40 @@ for (var a=0; a<3; a++) {
 }
 ```
 
+<br>
+
+****
+
+<br>
+
+Quando há a necessidade de criar um Mutex fixo, por exemplo, para a <b>execução de um único node de cada vez</b>, podemos usar o comando especial.
+
+De modo que, quando outros nodes em execução, verificam o estado do mutex através da função node_lock, caso o mesmo já estiver travado/em uso por algum outro node, os mesmos solicitantes ficam em espera aguardando a liberação do respectivo mutex.
+
+Obs: a mesma lógica de acesso a um recurso de escopo superior, se aplica ao invocar a função node_lock/node_unlock, de modo que se houver nodes (utilizando de funções diferentes) que utilizam o mesmo mutex, elas não conflitam, pois o mutex é tratado como um recurso, e portanto, é gestionado.
+
+```php
+// Tipo especial para controle do mutex.
+var mutex :node_mutex;
+
+fn function1 (node_id :int) {
+    node_lock(mutex);
+
+    // Code here...
+    print("Node: {node_id}\n");
+
+    node_unlock(mutex);
+}
+
+// Cria nodes.
+var instances = [];
+
+for (var a=0; a<3; a++) {
+    var instance :node = function1(a);
+    instances[a] = instance;
+}
+
+print("Nodes created!\n");
+```
+
 
