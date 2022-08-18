@@ -205,7 +205,7 @@ for (var a=0; a<3; a++) {
 
 <br>
 
-Quando há a necessidade de criar um Mutex fixo, por exemplo, para a <b>execução de um único node de cada vez</b>, podemos usar o comando especial.
+Quando há a necessidade de criar um Mutex fixo, por exemplo, para a <b>execução de um único node de cada vez</b>, isto é, para realizar o <b>sincronismo</b> entre nodes, podemos fazer o uso da mesma noção de Mutex e usar as funções especiais descritas abaixo.
 
 De modo que, quando outros nodes em execução, verificam o estado do mutex através da função node_lock, caso o mesmo já estiver travado/em uso por algum outro node, os mesmos solicitantes ficam em espera aguardando a liberação do respectivo mutex.
 
