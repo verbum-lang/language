@@ -10,17 +10,19 @@ Note que se for criado um node comum a partir de um outro node virtual, contido 
 
 - <b>Utilização de um node virtual específico</b>, neste caso é necessário especificar o ID do node destinatário. Se esse node se encontra sendo executado sobre algum node real em algum outro ponto da rede, será lá naquela máquina a qual ele pertence que será então executado o respectivo bloco de código.
 
+- <b>Nodes criados a partir de algum node virtual específico</b>, é muito simples perceber que para este caso, basta primeiramente utilizar um node virtual específico, e partir do mesmo, criar nodes comuns, onde serão criados a partir do escopo em que se encontram. Podendo assim criar nodes virtuais a partir de um node virtual específico, herdando as características de seu escopo de execução.
+
 <br>
 
 Exemplo de um node comum criado no mesmo escopo de código do sistema.
 
 ```js
+// Criação do node.
+var instance :node = function1("Puro");
+
 fn function1 (param: string) {
     print("Deus eh Santo {param}!\n");
 }
-
-// Criação do node.
-var instance :node = function1("Puro");
 ```
 
 <br>
@@ -30,12 +32,31 @@ Exemplo da utilização de um node virtual específico já existente.
 Note que é especificado o <b>ID único</b> do node destinatário. Este ID está acessível através do Node Mapper.
 
 ```js
+// Conexão com o node existente.
+var instance :node { id: 'VerbumNode' } = function1("Puro");
+
 fn function1 (param: string) {
     print("Deus eh Santo {param}!\n");
 }
+```
 
-// Conexão com o node existente.
+<br>
+
+Criando um novo node virtual, a partir de outro node virtual específico.
+
+```js
+// Conexão com o node específico.
 var instance :node { id: 'VerbumNode' } = function1("Puro");
+
+fn function1 (param: string) {
+    // Cria node herdando as características
+    // do escopo de execução em questão.
+    var instance :node = function2(param);
+}
+
+fn function2 (param: string) {
+    print("Deus eh Santo {param}!\n");
+}
 ```
 
 <br>
