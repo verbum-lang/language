@@ -62,4 +62,6 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
 
 - <b>node_destroy</b>: destroi um node.
 
+- <b>node_mapper_list</b>: retorna array contendo a lista dos nodes existentes no Node Mapper local.
+
 
