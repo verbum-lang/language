@@ -67,6 +67,8 @@ Os nodes de camada 1 são gestionados através das operações do Node Mapper, p
 
 - Mesmo que os nodes virtuais proporcionais à topologia da camada 1 não estejam sendo utilizados, os mesmos existem necessariamente em conjunto com o node real. Pois o mesmo trata-se da camada de abstração de recursos criada, e é sobre esta (camada 2) que será executado o sistema (camada 3).
 
+- Importante citar que este recurso é <b>opcional</b>, mas por padrão vem ativado. Sendo também, portanto, possível criar através do Node Mapper um node virtual dentro de algum node real específico. Para assim realizar o design dos nodes virtuais na rede, e sobre esta rede de nodes virtuais, executar o sistema/aplicação.
+
 <br>
 
 <b>Funcionalidades básicas do Node Mapper:</b>
