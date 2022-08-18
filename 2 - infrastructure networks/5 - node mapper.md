@@ -115,17 +115,20 @@ Podendo então realizar as mesmas operações básicas de <b>adicionar</b>, <b>e
 
 <br>
 
-Há a necessidade de se possuir um ponto de controle central de toda a rede de nodes. Ou seja, algum ponto onde funcione como uma central de comandos e que possui acesso as informações de todos os nodes componentes da rede.
+Há a necessidade de se possuir um <b>ponto de controle central</b> de toda a rede de nodes. Ou seja, algum ponto onde funcione como uma central de comandos e que possui acesso as informações de todos os nodes componentes da rede.
 
 Para suprir essa necessidade existe um comando especial no Node Mapper, para realizar a <b>varredura</b> da rede.
+
+É então, no Node Mapper local, criada a noção de unificação da rede, ou seja, um ponto da rede que possui acesso as informações das coisas que compõem a própria rede.
 
 <br>
 
 <b>Questões gerais:</b>
 
-- É inserida uma mensagem na rede, e nela propagada, solicitando as informações de seus Node Mapper locais.
+- É inserida uma mensagem na rede, e nela propagada, solicitando as informações de seus Node Mapper locais (comando de varredura).
 
 - Tais informações são então reunidas no Node Mapper da máquina em questão, a através do mesmo podem ser realizadas as ações de adicionar, excluir e migrar nodes, sejam eles nodes reais ou virtuais. 
 
-
+- É recomendado que através desta mesma máquina seja então iniciado a execução do sistema (camada 3), pois o mesmo, possuindo seu core na mesma máquina, fica mais facilmente acessível as informações dos nodes da rede. Ou também, pode-se executar um node especial, servindo como serviço para informar aos solicitantes os nodes existentes na rede, desta maneira, outro node de alguma parte da rede, pode solicitar ao mesmo as informações de algum node de interesse em específico.
+  
 
