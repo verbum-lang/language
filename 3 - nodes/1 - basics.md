@@ -26,7 +26,9 @@ Em outras palavras, os nodes procuram suprir as necessidades envolvendo os conce
 
 6. Importante saber que para os nodes de rede é sempre realizado a verificação do <b>handshake</b>, de modo que se vier a falhar a criação de algum node, como questões de comunicação, e não houver nenhuma verificação posterior para a conexão, o processamento continuará de acordo com o fluxo sequencial da execução dos comandos do código em questão. De modo que tais erros são enviados para o controlador interno de erros do sistema (abstração do <b>Fault Tolerance</b>). Para verificações em tempo de execução, pode-se usar a função especial chamada <b>node_check_connection</b>.
 
-7. Quando um node de rede retorna alguma informação de maneira nativa, ou seja, através do uso comum da linguagem, como no acesso a algum recurso externo (como uma variável global) ele utiliza da abstração do <b>Protocolo de Comunicação</b> para se comunicar com os nodes de nível hierarquico superior.
+7. Quando um node de rede retorna alguma informação de maneira nativa, ou seja, através do uso comum da linguagem, como no acesso a algum recurso externo (como uma variável global) ele utiliza da abstração do <b>Protocolo de Comunicação (INC)</b> para se comunicar com os nodes de nível hierarquico superior.
+
+8. A organização hierárquica dos nodes (definindo a topologia), é definida pelas noções de cliente/servidor, as conexões de uns para com os outros definem a topologia da rede de nodes.
 
 <br>
 
