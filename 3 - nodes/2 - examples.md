@@ -6,8 +6,10 @@ Cria o equivalente ao funcionamento de uma <b>thread assíncrona</b>. Observaç�
 
 ```js
 fn function1 (param: string) {
-    for ()
+    for () {
         print("Deus eh Santo {param}!\n");
+        sleep(3);
+    }
 }
 
 // Especifica tipo especial "node".
