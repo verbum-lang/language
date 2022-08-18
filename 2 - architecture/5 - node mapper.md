@@ -48,6 +48,8 @@ Em linhas gerais, o <b>Node Mapper é um servidor</b> que é <b>iniciado na máq
    
     8. E assim finalizando a migração.
     
+- O Node Mapper local trata-se mais como um unificador dos nodes pertencentes ao contexto da máquina atual, e não como controlador da visibilidade dos nodes da rede. Para situações onde é realizada uma conexão com um node, onde o ID do mesmo não consta no Node Mapper local, é propagada uma mensagem pela rede de nodes (camada 2) procurando saber da existência do mesmo. E assim dando continuação a ação. 
+
 <br>
 
 ****
