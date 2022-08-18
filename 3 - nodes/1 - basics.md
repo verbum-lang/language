@@ -42,11 +42,11 @@ A existência da abstração dos nodes se dá através de sua interface na lingu
 
 <b>Funções:</b>
 
-- <b>node_check_connection</b>: verifica conexão do node de rede. Utilizado para garantir que a conexão está em ordem, para caso não estiver, tomar alguma ação.
+- <b>node_check</b>: verifica estado do node. Utilizado para garantir que a comunicação está em ordem, para caso não estiver, tomar alguma ação.
 
-- <b>node_await</b>: aguarda finalização da callback. Trava a execução sequencial.
+- <b>node_await</b>: aguarda finalização da função. Trava a execução sequencial.
 
-- <b>node_result</b>: Retorna resultado da callback. Retorna array, para verificação. <br> 
+- <b>node_result</b>: Retorna resultado da função. Retorna array, para verificação. <br> 
   Componentes do array: 
 ```
     data: dados binários do resultado.
