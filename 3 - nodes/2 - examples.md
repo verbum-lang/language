@@ -206,7 +206,7 @@ De modo que, quando outros nodes em execução, verificam o estado do mutex atra
 
 Obs: a mesma lógica de acesso a um recurso de escopo superior, se aplica ao invocar a função node_lock/node_unlock, de modo que se houver nodes (utilizando de funções diferentes) que utilizam o mesmo mutex, elas não conflitam, pois o mutex é tratado como um recurso, e portanto, é gestionado.
 
-```php
+```js
 // Tipo especial para controle do mutex.
 var mutex :node_mutex;
 
