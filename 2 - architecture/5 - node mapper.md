@@ -48,6 +48,8 @@ Em linhas gerais, o <b>Node Mapper é um servidor</b> que é <b>iniciado na máq
    
     8. E assim finalizando a migração.
     
+- Há uma função no Node Mapper que pode ser utilizada para se adicionar novos nodes (visibilidade) em Node Mapper's específicos.
+
 <br>
 
 ****

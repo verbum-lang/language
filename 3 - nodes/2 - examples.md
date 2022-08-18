@@ -27,11 +27,9 @@ fn function1 (param: string) {
 
 <br>
 
-Exemplo da utilização de um node virtual específico já existente.
+Exemplo da utilização de um node virtual específico já existente. Note que é especificado o <b>ID único</b> do node destinatário. Este ID está acessível através do Node Mapper local.
 
-Note que é especificado o <b>ID único</b> do node destinatário. Este ID está acessível através do Node Mapper.
-
-Inicialmente é tentado conectar num node pertencente e acessível ao Node Mapper em questão. Caso não exista registro do mesmo no Node Mapper local, o mesmo é procurado na própria rede, caso seja encontrado, é então realizada a conexão e dado prosseguimento as ações seguintes.
+<b>Importante</b> ter em mente que só é possível conectar em nodes, desde que os mesmos estejam visíveis pelo Node Mapper local. Podendo assim definir a visibilidade de setores da rede de nodes, baseado na abstração do Node Mapper. Caso o node não estiver visível no Node Mapper local, simplesmente não vai efetivar a conexão.
 
 ```js
 // Conexão com o node existente.

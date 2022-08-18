@@ -99,11 +99,19 @@ for () {
 
 <br>
 
-<b>Noções Gerais:</b>
+****
+
+### <b>Manipulação de visibilidade de nodes</b>
 
 <br>
 
-- 
+
+<p align="center" >
+<br>
+<img src="../0%20-%20extras/diagram/general-4.png" />
+<br>
+<br>
+</p>
 
 
 
