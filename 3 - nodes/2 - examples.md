@@ -6,7 +6,7 @@ Os nodes (ou seja, os nodes virtuais) são norteados por algumas noções gerais
 
 - <b>Nodes criados no escopo em questão</b>, ou seja, nodes virtuais que ao serem criados, o são sobre o escopo em questão (o modo mais simples de criar um node). O próprio sistema, quando o mesmo é iniciado, deve-se explicitar o node virtual no qual ele será executado. Deste modo, este node a qual o sistema foi executado está existindo sobre um node real específico. Quando se cria um node virtual simples, o mesmo trata-se apenas de mais um sub-processo neste processo principal do node real. Ou seja, é um node de camada 2, existindo no escopo no qual o próprio sistema foi iniciado. O mesmo também encontra-se na mesma máquina a qual pertence o node virtual de nível hierárquico superior (neste caso o do próprio sistema).
 <br><br>
-Note que se for criado um node comum a partir de um outro node virtual, contido em outra máquina, será lá nesta máquina que serão criados novos nodes virtuais. 
+Note que se for criado um node comum a partir de um outro node virtual, contido em outra máquina, será lá nesta máquina que serão criados novos nodes virtuais. Pois os nodes são criados a partir do escopo em que se encontram no momento de sua criação. 
 
 - <b>Utilização de um node virtual específico</b>, neste caso é necessário especificar o ID do node destinatário. Se esse node se encontra sendo executado sobre algum node real em algum outro ponto da rede, será lá naquela máquina a qual ele pertence que será então executado o respectivo bloco de código.
 
