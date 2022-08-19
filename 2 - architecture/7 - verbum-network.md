@@ -22,7 +22,7 @@ Aplicação responsável por realizar a criação/gestão da Layer 1 e 2, cria e
   
 - <b>source</b>: código fonte das soluções/ferramentas.
 
-- <b>settings</b>: arquivos de configurações de testes/exemplos.
+- <b>configuration</b>: arquivos de configurações de testes/exemplos.
 
 <br>
 Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diretório <b>projects/sdk-binaries</b>.
