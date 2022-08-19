@@ -10,6 +10,8 @@ Devido a linguagem ainda estar em desenvolvimento, até o momento o ambiente de 
 
 <b>Noções Gerais (ferramentas):</b>
 
+- <b>verbum</b>: utilitário responsável por unificar todas as ferramentas da suite e proporcionar uma boa experiência no uso da linguagem, contendo shell interativa, com interfaces para acessar todas as funcionalidades das ferramentas da suite, e noções semelhantes.
+
 - <b>verbum-network</b>: aplicação responsável por realizar a criação/gestão da Layer 1 e 2, cria e gestiona todos os nodes de camada 1 e 2. Contendo as noções e controles relacionados ao Node Mapper, questões do Fault Tolerance e outras questões relacionadas.
 
 - <b>verbum-parser</b>: responsável por realizar todas as etapas de análise léxica, sintática e semântica, bem como realizar a geração final da AST. O produto do parser é a AST, podendo ela ser exportada para uso em outras aplicações.
