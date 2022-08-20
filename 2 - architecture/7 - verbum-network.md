@@ -8,11 +8,15 @@ Aplicação responsável por realizar a criação/gestão da Layer 1 e 2, cria e
 
 <b>Utilitários/ferramentas (gerais):</b>
 
-- <b>verbum-network</b>: script responsável por iniciar os respectivos setores da solução.
+- <b>verbum-network</b>: responsável por iniciar os respectivos setores da solução.
 
 - <b>verbum-node-mapper</b>: aplicação responsável por realizar o controle das ações envolvendo o Node Mapper.
 
 - <b>verbum-fault-tolerance</b>: responsável por controlar as ações referentes à alta tolerância a falhas (logs e semelhantes).
+
+<br>
+
+<b>Obs: </b> é necessário ter as ferramentas configuradas acessíveis nas <b>variáveis de ambiente</b> do sistema operacional (sudo ln -s path/name /usr/bin/name).
 
 <br>
 
