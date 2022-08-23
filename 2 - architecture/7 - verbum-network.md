@@ -37,5 +37,26 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
 - <b>build-scripts/build-all.sh</b>: compila todos os projetos, salva os binários no diretório atual (verbum-network) com seus respectivos nomes (verbum-node-mapper, verbum-fault-tolerance).
 
+<br>
+
+****
+
+### <b>Node Mapper - Protocol</b>
+
+<br>
+
+<b>Funcinalidades:</b>
+
+- <b>Handshake</b>: é realizado lendo o banner.
+  ```
+  Verbum Node Mapper - vX.Y.Z - I Love Jesus <3
+  ```
+
+- <b>Gera ID único para node</b>: envia a mensagem abaixo.
+  ```
+  generate-node-id
+  ```
+  Como resposta da requisição vem o ID único para o node.
+  Obs: o mesmo ainda não fica salvo no Node Mapper, este é apenas um recurso de geração de nomes únicos.
 
 
