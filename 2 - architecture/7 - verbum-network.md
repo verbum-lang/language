@@ -54,9 +54,14 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
 - <b>Gera ID único para node</b>: envia a mensagem abaixo.
   ```
-  generate-node-id
+  generate-verbum-node-id
   ```
   Como resposta da requisição vem o ID único para o node.
   Obs: o mesmo ainda não fica salvo no Node Mapper, este é apenas um recurso de geração de nomes únicos.
+
+- <b>Ping node</b>: realiza ping periódico para persistir conectado, bem como informar a última conexão.
+  ```
+  ping-verbum-node
+  ```
 
 
