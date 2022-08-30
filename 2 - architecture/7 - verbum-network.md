@@ -63,4 +63,9 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   ping-verbum-node:node-id
   ```
 
+- <b>Get node list</b>: retorna lista dos nodes existentes no Node Mapper, com suas respectivas informações (atualmente dump para análise).
+  ```
+  get-node-list
+  ```
+
 
