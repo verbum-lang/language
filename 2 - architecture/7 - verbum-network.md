@@ -45,23 +45,22 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
 <br>
 
-<b>Funcinalidades:</b>
+<b>Interface:</b>
 
 - <b>Handshake</b>: é realizado lendo o banner.
   ```
   Verbum Node Mapper - vX.Y.Z - I Love Jesus <3
   ```
 
-- <b>Gera ID único para node</b>: envia a mensagem abaixo.
+- <b>Gera node</b>: gera novo ID para node, e cadastra ele na estrutura de controle (fica salvo no Node Mapper).
   ```
-  generate-verbum-node-id
+  generate-verbum-node-id:PORT
   ```
-  Como resposta da requisição vem o ID único para o node.
-  Obs: o mesmo ainda não fica salvo no Node Mapper, este é apenas um recurso de geração de nomes únicos.
-
+  Como resposta da requisição é retornado o ID único para o node.
+  
 - <b>Ping node</b>: realiza ping periódico para persistir conectado, bem como informar a última conexão.
   ```
-  ping-verbum-node
+  ping-verbum-node:node-id
   ```
 
 
