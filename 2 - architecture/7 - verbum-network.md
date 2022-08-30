@@ -52,17 +52,23 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   Verbum Node Mapper - vX.Y.Z - I Love Jesus <3
   ```
 
+  <br>
+
 - <b>Gera node</b>: gera novo ID para node, e cadastra ele na estrutura de controle (fica salvo no Node Mapper).
   ```
   generate-verbum-node-id:PORT
   ```
   Como resposta da requisição é retornado o ID único para o node.
   
-- <b>Ping node</b>: realiza ping periódico para persistir conectado, bem como informar a última conexão.
+  <br>
+
+- <b>Ping node</b>: realiza ping periódico para garantir persistência da disponibilidade do node.
   ```
-  ping-verbum-node:node-id
+  ping-verbum-node:NODE-ID:NODE-PORT
   ```
-  Um dos propósitos no <b>ping</b> é fazer com que as informações do node seja re-enviadas para o Node Mapper, mantendo o mesmo sempre atualizado com as informações mais recentes. Recurso útil caso houver algum problema com o Node Mapper e ele vier a se reinicializar (persistência).
+  Um dos propósitos deste recurso é fazer com que as informações do node seja re-enviadas para o Node Mapper, mantendo o mesmo sempre atualizado com as informações mais recentes. Recurso útil caso houver algum problema com o Node Mapper e ele vier a se reinicializar (persistência).
+
+  <br>
 
 - <b>Get node list</b>: retorna lista dos nodes existentes no Node Mapper, com suas respectivas informações (atualmente dump para análise).
   ```
