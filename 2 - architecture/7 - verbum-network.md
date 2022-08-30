@@ -62,6 +62,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   ```
   ping-verbum-node:node-id
   ```
+  Um dos propósitos no <b>ping</b> é fazer com que as informações do node seja re-enviadas para o Node Mapper, mantendo o mesmo sempre atualizado com as informações mais recentes. Recurso útil caso houver algum problema com o Node Mapper e ele vier a se reinicializar (persistência).
 
 - <b>Get node list</b>: retorna lista dos nodes existentes no Node Mapper, com suas respectivas informações (atualmente dump para análise).
   ```
