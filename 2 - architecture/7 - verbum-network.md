@@ -39,7 +39,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
 ****
 
-### <b>Node Mapper - Protocol</b>
+### <b>Verbum Node Mapper - Protocol</b>
 
 <br>
 
@@ -74,25 +74,6 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   ```
   <br>
 
-- <b>Create node client connection</b>: cria nova conexão de um node em outro (client -> server).
-  ```
-  create-node-client-connection:SRC-NODE-ID:DST-NODE-ID:NODE-MAPPER-IP:NODE-MAPPER-PORT
-  ```
-
-  <b>Campos:</b><br>
-  1. <b>SRC-NODE-ID</b> - ID do node local.
-  2. <b>DST-NODE-ID</b> - ID do node destinatário.
-  3. <b>NODE-MAPPER-IP</b> - IP do Node Mapper (onde encontra-se o node destinatário).
-  4. <b>NODE-MAPPER-PORT</b> - Porta do servidor Node Mapper.
-
-  <br>
-
-  <b>Etapas gerais:</b><br>
-  1. O Node Mapper local conecta-se no endereço do Node Mapper do node destinatário, para verificar se o node destinatário existe. Caso não exista a operação é cancelada.
-  2. O Node Mapper local conecta-se no node local, informando-o que o mesmo deve se conectar no node destinatário (no caso são informados ao node o IP do Node Mapper, e a porta do node destinatário).
-
-<br>
-
 - <b>Check node exists</b>: verifica se um node existe dentro do Node Mapper, para que se possa realizar conexão com o mesmo. Caso o mesmo exista, é retornado sua porta de conexão. Caso não exista é retornado uma mensagem de erro.
 
   ```
@@ -101,9 +82,29 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
 <br>
 
+- <b>Create node client connection</b>: cria nova conexão de um node em outro (client -> server).
+  ```
+  create-node-client-connection:SRC-NODE-ID:DST-NODE-ID:NODE-MAPPER-IP:NODE-MAPPER-PORT
+  ```
+
+  <b>Campos:</b><br>
+  1. <b>SRC-NODE-ID</b> - ID do node local (client).
+  2. <b>DST-NODE-ID</b> - ID do node destinatário (server).
+  3. <b>NODE-MAPPER-IP</b> - IP do Node Mapper (onde encontra-se o node destinatário).
+  4. <b>NODE-MAPPER-PORT</b> - Porta do servidor Node Mapper.
+
+  <br>
+
+  <b>Etapas gerais:</b><br>
+  1. O Node Mapper local conecta-se no endereço do Node Mapper do node destinatário, para verificar se o node destinatário existe. Caso não exista a operação é cancelada.
+   
+  2. O Node Mapper local conecta-se no node local, informando-o que o mesmo deve se conectar no node destinatário (no caso são informados ao node o IP do Node Mapper, e a porta do node destinatário).
+
+<br>
+
 ****
 
-### <b>Node - Protocol</b>
+### <b>Verbum Node - Protocol</b>
 
 <br>
 
@@ -116,7 +117,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
   <br>
 
-- <b>Create node connection</b>: cria nova conexão de um node em outro.
+- <b>Create node client connection</b>: cria nova conexão de um node em outro (client -> server).
   ```
   create-node-client-connection:NODE-MAPPER-IP:NODE-PORT
   ```
