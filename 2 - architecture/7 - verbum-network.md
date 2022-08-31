@@ -97,6 +97,9 @@ Obs: no ambiente local de desenvolvimento e testes, os bin√°rios ficam no diret√
 
   ```
   check-node-exists:NODE-ID
+  ```
+
+<br>
 
 ****
 
