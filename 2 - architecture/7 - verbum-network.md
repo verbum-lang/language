@@ -10,7 +10,9 @@ Aplicação responsável por realizar a criação/gestão da Layer 1 e 2, cria e
 
 - <b>verbum-node</b>: responsável por criar node.
 
-- <b>verbum-node-mapper</b>: aplicação responsável por realizar o controle das ações envolvendo o Node Mapper.
+- <b>verbum-node-mapper</b>: aplicação responsável por realizar o controle das ações envolvendo o Node Mapper. Aplicação principal (possui interface via rede).
+
+- <b>Node Mapper Manager</b>: aplicação gráfica para gestão do Node Mapper.
 
 <br>
 
@@ -138,6 +140,14 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
   ```
   delete-connection:CONNECTION-ID
+  ```
+
+<br>
+
+- <b>Send data</b>: envia um arquivo de dados através da infraestrutura da rede. Através do sistema de packets.
+
+  ```
+  ...
   ```
 
 <br>
