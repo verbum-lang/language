@@ -74,5 +74,31 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   ```
   get-node-list
   ```
+  <br>
+
+- <b>Create node connection</b>: cria nova conexão de um node em outro.
+  ```
+  create-node-connection:SRC-NODE-ID:DST-NODE-ID
+  ```
+
+  Obs: esta mesma conexão client-server, é também utilizada para realizar a conexão reversa. Ou seja, mesmo conectado como cliente, o node funciona por esse canal também como servidor. Deixando claro que o servidor padrão, isto é, com listagem de alguma porta de rede, também fica operando.
+
+
+<br>
+
+****
+
+### <b>Node - Protocol</b>
+
+<br>
+
+<b>Interface:</b>
+
+- <b>Handshake</b>: é realizado lendo o banner.
+  ```
+  Verbum Node - vX.Y.Z - I Love Jesus <3
+  ```
+
+  <br>
 
 
