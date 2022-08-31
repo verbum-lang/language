@@ -74,10 +74,18 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   ```
   <br>
 
-- <b>Check node exists</b>: verifica se um node existe dentro do Node Mapper, para que se possa realizar conexão com o mesmo. Caso o mesmo exista, é retornado sua porta de conexão. Caso não exista é retornado uma mensagem de erro.
+- <b>Create new node</b>: cria novo node.
 
   ```
-  check-node-exists:NODE-ID
+  create-node
+  ```
+
+<br>
+
+- <b>Delete node</b>: exclui node.
+
+  ```
+  delete-node
   ```
 
 <br>
@@ -122,6 +130,14 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
   ```
   create-node-server-connection:SRC-NODE-ID:DST-NODE-ID:NODE-MAPPER-IP:NODE-MAPPER-PORT
+  ```
+
+<br>
+
+- <b>Delete connection</b>: remove conexão de um node, independente de ser cliente ou servidor. Quando é servidor, informa o cliente conectado que deve remover a conexão.
+
+  ```
+  delete-connection:CONNECTION-ID
   ```
 
 <br>
