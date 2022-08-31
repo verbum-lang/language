@@ -8,11 +8,9 @@ Aplicação responsável por realizar a criação/gestão da Layer 1 e 2, cria e
 
 <b>Utilitários/ferramentas (gerais):</b>
 
-- <b>verbum-network</b>: responsável por iniciar os respectivos setores da solução.
+- <b>verbum-node</b>: responsável por criar node.
 
 - <b>verbum-node-mapper</b>: aplicação responsável por realizar o controle das ações envolvendo o Node Mapper.
-
-- <b>verbum-fault-tolerance</b>: responsável por controlar as ações referentes à alta tolerância a falhas (logs e semelhantes).
 
 <br>
 
@@ -35,7 +33,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
 <b>Questões gerais:</b>
 
-- <b>build-scripts/build-all.sh</b>: compila todos os projetos, salva os binários no diretório atual (verbum-network) com seus respectivos nomes (verbum-node-mapper, verbum-fault-tolerance).
+- <b>build-scripts/build-all.sh</b>: compila todos os projetos, salva os binários no diretório do ambiente de desenvolvimento (projects/sdk-binaries) com seus respectivos nomes (verbum-node, verbum-node-mapper).
 
 <br>
 
@@ -54,7 +52,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
   <br>
 
-- <b>Gera node</b>: gera novo ID para node, e cadastra ele na estrutura de controle (fica salvo no Node Mapper).
+- <b>Node generation</b>: gera novo ID para node, e cadastra ele na estrutura de controle (fica salvo no Node Mapper).
   ```
   generate-verbum-node-id:PORT
   ```
@@ -76,15 +74,29 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   ```
   <br>
 
-- <b>Create node connection</b>: cria nova conexão de um node em outro.
+- <b>Create node client connection</b>: cria nova conexão de um node em outro (client -> server).
   ```
-  create-node-connection:SRC-NODE-ID:DST-NODE-ID
+  create-node-client-connection:SRC-NODE-ID:DST-NODE-ID:NODE-MAPPER-IP:NODE-MAPPER-PORT
   ```
 
-  Obs: esta mesma conexão client-server, é também utilizada para realizar a conexão reversa. Ou seja, mesmo conectado como cliente, o node funciona por esse canal também como servidor. Deixando claro que o servidor padrão, isto é, com listagem de alguma porta de rede, também fica operando.
+  <b>Campos:</b><br>
+  1. <b>SRC-NODE-ID</b> - ID do node local.
+  2. <b>DST-NODE-ID</b> - ID do node destinatário.
+  3. <b>NODE-MAPPER-IP</b> - IP do Node Mapper (onde encontra-se o node destinatário).
+  4. <b>NODE-MAPPER-PORT</b> - Porta do servidor Node Mapper.
 
+  <br>
+
+  <b>Etapas gerais:</b><br>
+  1. O Node Mapper local conecta-se no endereço do Node Mapper do node destinatário, para verificar se o node destinatário existe. Caso não exista a operação é cancelada.
+  2. O Node Mapper local conecta-se no node local, informando-o que o mesmo deve se conectar no node destinatário (no caso são informados ao node o IP do Node Mapper, e a porta do node destinatário).
 
 <br>
+
+- <b>Check node exists</b>: verifica se um node existe dentro do Node Mapper, para que se possa realizar conexão com o mesmo. Caso o mesmo exista, é retornado sua porta de conexão. Caso não exista é retornado uma mensagem de erro.
+
+  ```
+  check-node-exists:NODE-ID
 
 ****
 
@@ -100,5 +112,12 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   ```
 
   <br>
+
+- <b>Create node connection</b>: cria nova conexão de um node em outro.
+  ```
+  create-node-client-connection:NODE-MAPPER-IP:NODE-PORT
+  ```
+
+  Obs: esta mesma conexão client-server, é também utilizada para realizar a conexão reversa. Ou seja, mesmo conectado como cliente, o node funciona por esse canal também como servidor. Deixando claro que o servidor padrão, isto é, com listagem de alguma porta de rede, também fica operando.
 
 
