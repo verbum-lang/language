@@ -113,10 +113,17 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
   <br>
 
-  <b>Etapas gerais:</b><br>
-  1. O Node Mapper local conecta-se no endereço do Node Mapper do node destinatário, para verificar se o node destinatário existe. Caso não exista a operação é cancelada. Caso exista, é retornado uma mensagem de sucesso.
+  <b>Etapas e noções gerais:</b><br>
+
+  1. Conecta-se no Node Mapper e envia as informações acima.
+  2. O Node Mapper verifica se o ID existe, caso não existir retorna erro.
+  3. Caso existir, envia as informações diretamente ao node, e aguarda a resposta.
+  
+  4. Node recebe a requisição, verifica se o ID é o dele, caso não seja retorna erro. Caso contrário, continua.
+  5. Salva as informações em seu controlador de conexão, e acina flag para realizar o processamento da requisição. E fica aguardando a resposta para envia-la a quem realizou a requisição.
    
-  2. O Node Mapper local conecta-se no node local, informando-o que o mesmo deve se conectar no node destinatário.
+  6. O controlador das conexões identifica a ação e processa/realiza a conexão com o node destinatário: conecta no Node Mapper destinatário e verifica se existe o respectivo node, caso não, retorna erro, caso sim, continua. Note que esta ação é feita através do comando check-verbum-node-exists, onde em caso de sucesso é retornado as informações de conexão do node (porta remota).
+  7. Com as informações do node, realiza a conexão com o mesmo (cliente -> servidor). 
 <br>
 
 - <b>Create node server connection</b>: recebe informações de algum node existente. Quando um node conecta-se em outro, o node que estava servindo (server), ao receber a nova conexão de outro node da rede, informa o Node Mapper local que possui uma conexão de entrada.
