@@ -152,16 +152,29 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   <b>Campos:</b><br>
   1. <b>SRC-NODE-ID</b> - ID do node local.
   2. <b>DST-NODE-ID</b> - ID do node de interesse.
-  3. <b>DST-NODE-MAPPER-IP</b> - IP do Node Mapper (onde encontra-se o node de interesse).
-  4. <b>DST-NODE-MAPPER-PORT</b> - Porta do servidor Node Mapper.
+  3. <b>DST-NODE-MAPPER-ID</b> - ID do NM. É necessário apenas para conexão reversa. Recurso não necessário para conexão direta.
+  4. <b>DST-NODE-MAPPER-IP</b> - IP do Node Mapper (onde encontra-se o node de interesse). Recurso necessário apenas para conexão direta. Na conexão reversa o recurso é ignorado.
+  5. <b>DST-NODE-MAPPER-PORT</b> - Porta do servidor Node Mapper.
 
   <br>
   <b>Noções gerais:</b><br>
 
-  1. É verificado se há conexão direta com o Node Mapper especificado, caso sim, prossegue e envia uma requisição de conexão do tipo output, do node de interesse ao node local. Se tudo for realizado com sucesso, então a conexão será criada e se terá uma resposta de sucesso.
+  1. É verificado se há conexão direta com o Node Mapper especificado, caso sim, continua e envia uma requisição de conexão do tipo output, do node de interesse ao node local. Se tudo for realizado com sucesso, então a conexão será criada e se terá uma resposta de sucesso.
   
-  2. Caso não possa ser realizado uma conexão direta com o Node Mapper, entra em cena o recurso de <b>conexão reversa</b>. 
+  2. Caso não possa ser realizado uma conexão direta com o Node Mapper, entra em cena o recurso de <b>conexão reversa</b>. Onde a requisição é enviada para as conexões cliente, ou seja, os Node Mapper que se conectam neste Node Mapper em questão. Onde na resposta da verificação do ping é enviada a requisição. O outro Node Mapper, ao recebe-la, processa-a, ou seja, realizando a devida conexão do node de interesse com o node local.
+   
+  3. <b>Nota</b>: para realizar a conexão reversa, é necessário que exista conexão de entrada no Node Mapper em questão, caso não existir nenhum Node Mapper, retorna o erro para quem realizou a requisição.
+  4. <b>Nota</b>: caso exista dois ou mais Node Mapper com ID repetido, a requisição é enviada aos mesmos.
 
+  <br>
+
+  <b>Noções gerais da conexão reversa:</b><br>
+
+  1. Nas respostas do ping, há sempre um "verbum-node-ok". Quando ocorre de alguma outra informação ser necessário de enviar ao node que se conecta, a mesma é enviada nesta resposta. De modo que o ping também funciona como um verificador de requisições destinadas a ele.
+   
+  2. Ao receber uma requisição para processar, a mesma é enviada para o mesmo processador das requisições, no qual o servidor (input connection) utiliza.
+
+<br>
 <br>
 
 - <b>Delete connection</b>: remove conexão de um node, independente de ser input ou output. Quando é input, informa o cliente conectado que deve remover a conexão.
@@ -171,12 +184,34 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   ```
 
 <br>
+<br>
 
-- <b>Send data</b>: envia um arquivo de dados através da infraestrutura da rede. Através do sistema de packets.
+- <b>Create Node Mapper connection</b>: realiza o pareamento de um Node Mapper com outro, através da conexão de um Node Mapper em outro.
+  
+  ```
+  create-verbum-node-mapper-connection:DST-NODE-MAPPER-IP:DST-NODE-MAPPER-PORT
+  ```
+
+  Ao realizar a conexão, o mesmo retorna também seu ID.<br><br>
+
+  Este recurso é importante, pois através dele ocorre o envio de requisições via conexão reversa entre os Node Mapper existentes.<br><br>
+
+  <b>Nota</b>: quando um NM conecta-se em outro, o que funciona como servidor, também salva as devidas informações, tais como o NM ID, NM IP e NM Port. De modo que essa mesma informação possa vir a ser utilizada posteriormente.
+
+<br>
+<br>
+
+- <b>Send data</b>: envia um bloco de dados através da infraestrutura da rede. Através do sistema de packets.
 
   ```
   ...
   ```
+
+  <b>Noções gerais da conexão reversa:</b><br>
+
+  1. Nas respostas do ping, há sempre um "verbum-node-ok". Quando ocorre de alguma outra informação ser necessário de enviar ao node que se conecta, a mesma é enviada nesta resposta. De modo que o ping também funciona como um verificador de requisições destinadas a ele. Sendo isto também um servidor.
+   
+  2. Ao receber uma requisição para processar, a mesma é enviada para o mesmo processador das requisições, no qual o servidor (input connection) utiliza. E a mesma é então processada.
 
 <br>
 
