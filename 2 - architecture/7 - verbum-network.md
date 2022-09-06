@@ -230,11 +230,10 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
   <br>
 
-- <b>Create node client connection</b>: cria nova conexão de um node em outro (client -> server).
-  ```
-  create-node-client-connection:NODE-MAPPER-IP:NODE-PORT
-  ```
+- <b>Delete node</b>: exclui node.
 
-  Obs: esta mesma conexão client-server, é também utilizada para realizar a conexão reversa. Ou seja, mesmo conectado como cliente, o node funciona por esse canal também como servidor. Deixando claro que o servidor padrão, isto é, com listagem de alguma porta de rede, também fica operando.
+  ```
+  delete-verbum-node:NODE-ID
+  ```
 
 
