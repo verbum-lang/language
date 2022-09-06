@@ -128,8 +128,16 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   <b>Do controlador à conexão com os servidores:</b><br>
 
   1. O controlador das conexões identifica a ação e processa/realiza a conexão com o node destinatário: conecta no Node Mapper destinatário e verifica se existe o respectivo node, caso não, retorna erro, caso sim, continua. Note que esta ação é feita através do comando check-verbum-node-exists, onde em caso de sucesso é retornado as informações de conexão do node (porta remota da sua interface, e portas de conexão).
-  2. Com as informações do node, realiza a conexão com o mesmo (cliente -> servidor). Note que a conexão é realiza com as portas dos servidores, e não com a interface de controle do node.
-   
+  2. Com as informações do node, realiza-se a conexão com o mesmo (cliente -> servidor). Note que a conexão é realiza com as portas dos servidores, e não com a interface de controle do node.
+  3. A conexão é realizada, e mantida, enviando um ping periódico. Onde neste ping vai junto as devidas informações de controle e identificação da conexão (ID do node cliente, porta do Node Mapper, IP do Node Mapper [obs: o IP do node cliente, que por sua vez é o IP do Node Mapper, é pego através do socket.]).
+  
+  <br>
+  <b>Do servidor à sua gestão das conexões:</b><br>
+
+  1. O servidor recebe o ping periódico, e envia as informações do mesmo para o controlador das conexões.
+  2. O controlador das conexões identifica a conexão através das informações do IP do Node Mapper, porta do Node Mapper, e do Node ID do cliente.
+
+<br>
 <br>
 
 - <b>Create node server connection</b>: recebe informações de algum node existente. Quando um node conecta-se em outro, o node que estava servindo (server), ao receber a nova conexão de outro node da rede, informa o Node Mapper local que possui uma conexão de entrada.
