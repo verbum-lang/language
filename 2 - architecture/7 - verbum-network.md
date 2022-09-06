@@ -100,9 +100,9 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
 <br>
 
-- <b>Create node client connection</b>: cria nova conexão de um node em outro (client -> server). Conexão de saída.
+- <b>Create node output connection</b>: cria nova conexão de um node em outro (client -> server). Conexão de saída.
   ```
-  create-verbum-node-client-connection:SRC-NODE-ID:DST-NODE-ID:DST-NODE-MAPPER-IP:DST-NODE-MAPPER-PORT
+  create-verbum-node-output-connection:SRC-NODE-ID:DST-NODE-ID:DST-NODE-MAPPER-IP:DST-NODE-MAPPER-PORT
   ```
 
   <b>Campos:</b><br>
@@ -131,29 +131,43 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   2. Com as informações do node, realiza-se a conexão com o mesmo (cliente -> servidor). Note que a conexão é realiza com as portas dos servidores, e não com a interface de controle do node.
   3. A conexão é realizada, e mantida, enviando um ping periódico. Onde neste ping vai junto as devidas informações de controle e identificação da conexão (ID do node cliente, porta do Node Mapper, IP do Node Mapper [obs: o IP do node cliente, que por sua vez é o IP do Node Mapper, é pego através do socket.]).
   4. Note que é mantida apenas uma conexão (de ping periódico), e caso necessário, através de multi-threading, são criadas N-conexões e enviados dados por elas (Send Data).
-  
+  5. Ao receber a mensagem de sucesso do ping periódico, é especificado no controlador que a conexão foi realizada.
+
   <br>
   <b>Do servidor à sua gestão das conexões:</b><br>
 
-  1. O servidor recebe o ping periódico, e envia as informações do mesmo para o controlador das conexões.
-  2. O controlador das conexões identifica a conexão através das informações do IP do Node Mapper, porta do Node Mapper, e do Node ID do cliente.
-  3. Ao processar as informações, periódicamente, envia para o Node Mapper local, junto com as informações do próprio node, que o mesmo possui uma conexão de INPUT.
+  1. O servidor recebe o ping periódico, e confirma seu recebimento com uma mensagem de sucesso. 
+  2. O servidor envia as informações do mesmo para o controlador das conexões.
+  3. O controlador das conexões identifica a conexão através das informações do IP do Node Mapper, porta do Node Mapper, e do Node ID do cliente.
+  4. Ao processar as informações, periódicamente, envia para o Node Mapper local, junto com as informações do próprio node, que o mesmo possui uma conexão de INPUT.
 
 <br>
 <br>
 
-- <b>Create node server connection</b>: recebe informações de algum node existente. Quando um node conecta-se em outro, o node que estava servindo (server), ao receber a nova conexão de outro node da rede, informa o Node Mapper local que possui uma conexão de entrada.
+- <b>Create node input connection</b>: cria uma conexão de entrada no node.
+  ```
+  create-verbum-node-input-connection:SRC-NODE-ID:DST-NODE-ID:DST-NODE-MAPPER-IP:DST-NODE-MAPPER-PORT
+  ```
 
-  ```
-  create-verbum-node-server-connection:SRC-NODE-ID:DST-NODE-ID:NODE-MAPPER-IP:NODE-MAPPER-PORT
-  ```
+  <b>Campos:</b><br>
+  1. <b>SRC-NODE-ID</b> - ID do node local.
+  2. <b>DST-NODE-ID</b> - ID do node de interesse.
+  3. <b>DST-NODE-MAPPER-IP</b> - IP do Node Mapper (onde encontra-se o node de interesse).
+  4. <b>DST-NODE-MAPPER-PORT</b> - Porta do servidor Node Mapper.
+
+  <br>
+  <b>Noções gerais:</b><br>
+
+  1. É verificado se há conexão direta com o Node Mapper especificado, caso sim, prossegue e envia uma requisição de conexão do tipo output, do node de interesse ao node local. Se tudo for realizado com sucesso, então a conexão será criada e se terá uma resposta de sucesso.
+  
+  2. Caso não possa ser realizado uma conexão direta com o Node Mapper, entra em cena o recurso de <b>conexão reversa</b>. 
 
 <br>
 
-- <b>Delete connection</b>: remove conexão de um node, independente de ser cliente ou servidor. Quando é servidor, informa o cliente conectado que deve remover a conexão.
+- <b>Delete connection</b>: remove conexão de um node, independente de ser input ou output. Quando é input, informa o cliente conectado que deve remover a conexão.
 
   ```
-  delete-connection:CONNECTION-ID
+  delete-connection:NODE-ID:CONNECTION-ID
   ```
 
 <br>
