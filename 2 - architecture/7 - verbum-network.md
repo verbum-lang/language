@@ -52,7 +52,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   Verbum Node Mapper - vX.Y.Z - I Love Jesus <3
   ```
 
-  <br>
+  <br><br>
 
 - <b>Node generation</b>: gera novo ID para node, e cadastra ele na estrutura de controle (fica salvo no Node Mapper).
   ```
@@ -60,7 +60,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   ```
   Como resposta da requisição é retornado o ID único para o node.
   
-  <br>
+  <br><br>
 
 - <b>Ping node</b>: realiza ping periódico para garantir persistência da disponibilidade do node.
   ```
@@ -68,7 +68,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   ```
   Um dos propósitos deste recurso é fazer com que as informações do node seja re-enviadas para o Node Mapper, mantendo o mesmo sempre atualizado com as informações mais recentes. Recurso útil caso houver algum problema com o Node Mapper e ele vier a se reinicializar (persistência).
 
-  <br>
+  <br><br>
 
 - <b>Get node list</b>: retorna lista dos nodes existentes no Node Mapper, com suas respectivas informações (atualmente dump para análise).
   ```
@@ -82,7 +82,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   create-verbum-node
   ```
 
-<br>
+  <br><br>
 
 - <b>Delete node</b>: exclui node.
 
@@ -90,7 +90,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   delete-verbum-node:NODE-ID
   ```
 
-<br>
+  <br><br>
 
 - <b>Check node exists</b>: verifica se um node existe dentro do Node Mapper, para que se possa realizar conexão com o mesmo. Caso o mesmo exista, é retornado sua porta de conexão. Caso não exista é retornado uma mensagem de erro.
 
@@ -98,7 +98,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   check-verbum-node-exists:NODE-ID
   ```
 
-<br>
+  <br><br>
 
 - <b>Create node output connection</b>: cria nova conexão de um node em outro (client -> server). Conexão de saída.
   ```
@@ -141,8 +141,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   3. O controlador das conexões identifica a conexão através das informações do IP do Node Mapper, porta do Node Mapper, e do Node ID do cliente.
   4. Ao processar as informações, periódicamente, envia para o Node Mapper local, junto com as informações do próprio node, que o mesmo possui uma conexão de INPUT.
 
-<br>
-<br>
+  <br><br>
 
 - <b>Create node input connection</b>: cria uma conexão de entrada no node.
   ```
@@ -174,8 +173,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
    
   2. Ao receber uma requisição para processar, a mesma é enviada para o mesmo processador das requisições, no qual o servidor (input connection) utiliza.
 
-<br>
-<br>
+  <br><br>
 
 - <b>Delete connection</b>: remove conexão de um node, independente de ser input ou output. Quando é input, informa o cliente conectado que deve remover a conexão.
 
@@ -183,8 +181,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   delete-connection:NODE-ID:CONNECTION-ID
   ```
 
-<br>
-<br>
+  <br><br>
 
 - <b>Create Node Mapper connection</b>: realiza o pareamento de um Node Mapper com outro, através da conexão de um Node Mapper em outro.
   
@@ -198,8 +195,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
   <b>Nota</b>: quando um NM conecta-se em outro, o que funciona como servidor, também salva as devidas informações, tais como o NM ID, NM IP e NM Port. De modo que essa mesma informação possa vir a ser utilizada posteriormente.
 
-<br>
-<br>
+  <br><br>
 
 - <b>Send data</b>: envia um bloco de dados através da infraestrutura da rede. Através do sistema de packets.
 
@@ -213,7 +209,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
    
   2. Ao receber uma requisição para processar, a mesma é enviada para o mesmo processador das requisições, no qual o servidor (input connection) utiliza. E a mesma é então processada.
 
-<br>
+  <br><br>
 
 ****
 
@@ -228,12 +224,20 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   Verbum Node - vX.Y.Z - I Love Jesus <3
   ```
 
-  <br>
+  <br><br>
 
 - <b>Delete node</b>: exclui node.
 
   ```
   delete-verbum-node:NODE-ID
+  ```
+
+  <br><br>
+
+- <b>Check node exists</b>: confirma ID do node.
+
+  ```
+  check-verbum-node-exists:NODE-ID
   ```
 
 
