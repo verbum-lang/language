@@ -72,14 +72,14 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
 - <b>Get node list</b>: retorna lista dos nodes existentes no Node Mapper, com suas respectivas informações (atualmente dump para análise).
   ```
-  get-node-list
+  get-verbum-node-list
   ```
   <br>
 
 - <b>Create new node</b>: cria novo node.
 
   ```
-  create-node
+  create-verbum-node
   ```
 
 <br>
@@ -87,7 +87,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 - <b>Delete node</b>: exclui node.
 
   ```
-  delete-node:NODE-ID
+  delete-verbum-node:NODE-ID
   ```
 
 <br>
@@ -95,7 +95,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 - <b>Check node exists</b>: verifica se um node existe dentro do Node Mapper, para que se possa realizar conexão com o mesmo. Caso o mesmo exista, é retornado sua porta de conexão. Caso não exista é retornado uma mensagem de erro.
 
   ```
-  check-node-exists:NODE-ID
+  check-verbum-node-exists:NODE-ID
   ```
 
 <br>
