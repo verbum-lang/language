@@ -87,15 +87,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 - <b>Delete node</b>: exclui node.
 
   ```
-  delete-node
-  ```
-
-<br>
-
-- <b>Check node exists</b>: verifica se um node existe dentro do Node Mapper, para que se possa realizar conexão com o mesmo. Caso o mesmo exista, é retornado sua porta de conexão. Caso não exista é retornado uma mensagem de erro.
-
-  ```
-  check-node-exists:NODE-ID
+  delete-node:NODE-ID
   ```
 
 <br>
