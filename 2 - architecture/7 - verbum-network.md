@@ -195,6 +195,10 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
   <b>Nota</b>: quando um NM conecta-se em outro, o que funciona como servidor, também salva as devidas informações, tais como o NM ID, NM IP e NM Port. De modo que essa mesma informação possa vir a ser utilizada posteriormente.
 
+  <br>
+
+  O benefício de conectar um NM em outro, é que através deste recurso é possível utilizar o recurso de <b>conexão reversa</b>.
+
   <br><br>
 
 - <b>Send data</b>: envia um bloco de dados através da infraestrutura da rede. Através do sistema de packets.
