@@ -122,7 +122,7 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
   <b>Do node ao controlador de requisições:</b><br>
   
   1. Node recebe a requisição, verifica se o ID é o dele, caso não seja retorna erro. Caso contrário, continua.
-  2. Salva as informações em seu controlador de conexão, e acina flag para realizar o processamento da requisição. E fica aguardando a resposta para envia-la a quem realizou a requisição.
+  2. Salva as informações em seu controlador de conexão, e aciona uma flag para realizar o processamento da requisição. E fica aguardando a resposta para envia-la a quem realizou a requisição.
   
   <br>
   <b>Do controlador à conexão com os servidores:</b><br>
