@@ -178,7 +178,11 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 - <b>Delete connection</b>: remove conexão de um node, independente de ser input ou output. Quando é input, informa o cliente conectado que deve remover a conexão.
 
   ```
+  // Node Mapper command.
   delete-connection:NODE-ID:CONNECTION-ID
+
+  // Sended by node to node mapper (internal).
+  delete-verbum-node-connection:CONNECTION-ID
   ```
 
   <br><br>
