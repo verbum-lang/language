@@ -64,7 +64,11 @@ Obs: no ambiente local de desenvolvimento e testes, os binários ficam no diret�
 
 - <b>Ping node</b>: realiza ping periódico para garantir persistência da disponibilidade do node.
   ```
+  // Simple ping: Node ID, last date connection.
   ping-verbum-node:NODE-ID:NODE-PORT
+
+  // Connections informations.
+  ping-verbum-connection:IHS\n\nCONNECTION-LIST
   ```
   Um dos propósitos deste recurso é fazer com que as informações do node seja re-enviadas para o Node Mapper, mantendo o mesmo sempre atualizado com as informações mais recentes. Recurso útil caso houver algum problema com o Node Mapper e ele vier a se reinicializar (persistência).
 
