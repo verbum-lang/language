@@ -1,27 +1,8 @@
-```
- __      __       _            Programming Language
- \ \    / /      | |                    
-  \ \  / /__ _ __| |__  _   _ _ __ ___  
-   \ \/ / _ \ '__| '_ \| | | | '_ ` _ \ 
-    \  /  __/ |  | |_) | |_| | | | | | |
-     \/ \___|_|  |_.__/ \__,_|_| |_| |_|
 
-         In principio erat Verbum 
-               et Verbum erat apud Deum
-                   et Deus erat Verbum
-                           - Evangelium secundum Ioannem
-```
+# Verbum language design
 
-Verbum, a simple and intuitive programming language, supports general concepts such as general purpose languages. It has its own features of modern languages: native support for distributed, parallel and concurrent computing, meta-programming, Hot Code Reloading, high fault tolerance and vertical and horizontal scalability.
+This repository contains information about Language Design.
 
-<b>Verbum language features:</b>
-- Free and open source
-- Simple and intuitive syntax (based on the paradigms: imperative, procedural, structured)
-- Distributed, parallel, and concurrent computing
-- meta-programming
-- Hot Code Reloading
-- High fault tolerance
-- Vertical and horizontal scalability
-
+Os textos estão escritos em português, mas futuramente, após a linguagem amadurecer, os textos serão traduzidos para o inglês.
 
 
