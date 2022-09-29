@@ -12,9 +12,10 @@
                            - Evangelium secundum Ioannem
 ```
 
-Verbum, a simple and intuitive programming language, supports general concepts such as general purpose languages. It has its own features of modern languages: native support for distributed, parallel and concurrent computing, meta-programming, Hot Code Reloading, high fault tolerance and vertical and horizontal scalability. 
+Verbum, a simple and intuitive programming language, supports general concepts such as general purpose languages. It has its own features of modern languages: native support for distributed, parallel and concurrent computing, meta-programming, Hot Code Reloading, high fault tolerance and vertical and horizontal scalability.
 
 <b>Verbum language features:</b>
+- Free and open source
 - Simple and intuitive syntax (based on the paradigms: imperative, procedural, structured)
 - Distributed, parallel, and concurrent computing
 - meta-programming
