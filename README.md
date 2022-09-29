@@ -3,6 +3,7 @@
 
 This repository contains information about Language Design.
 
-Os textos estão escritos em português, mas futuramente, após a linguagem amadurecer, os textos serão traduzidos para o inglês.
+
+The texts are written in Portuguese, but in the future, after the language has matured, the texts will be translated into English.
 
 
